@@ -65,7 +65,7 @@ const MenuSection = () => {
       name: "Coffee",
       items: [
         { name: "Greek Coffee", price: "2.00" },
-        { name: "Double Greek", price: "3.50" },
+        { name: "Double Greek Coffee", price: "3.50" },
         { name: "Espresso", price: "2.20" },
         { name: "Double Espresso", price: "4.00" },
         { name: "Espresso Lungo", price: "2.40" },
@@ -77,11 +77,12 @@ const MenuSection = () => {
         { name: "Double Cappuccino", price: "4.80" },
         { name: "Latte Hot", price: "4.80" },
         { name: "Latte Cold", price: "4.60" },
-        { name: "Frappe / Nes", price: "3.90" }
+        { name: "Frappe", price: "3.90" },
+        { name: "Nes", price: "3.90" }
       ]
     },
     {
-      name: "Juices & Frozen",
+      name: "Juices and Frozen",
       items: [
         { name: "Strawberry Ice Pops", price: "3.70" },
         { name: "Fresh Orange Juice", price: "4.00" },
@@ -92,26 +93,33 @@ const MenuSection = () => {
     {
       name: "Soft Drinks & Energy",
       items: [
-        { name: "Iced Tea / Fuze Tea", price: "3.00 / 5.00" },
-        { name: "Coca Cola / Zero / Light", price: "3.50" },
-        { name: "Schweppes", price: "3.50" },
-        { name: "Three Cents", price: "5.00" },
-        { name: "Red Bull", price: "5.00 / 6.00" },
-        { name: "Monster", price: "5.00" },
+        { name: "Iced Tea Lemon", price: "3.00" },
+        { name: "Iced Tea Peach", price: "3.00" },
+        { name: "Fuze Tea", price: "5.00" },
+        { name: "Coca Cola", price: "3.50" },
+        { name: "Coca Cola Zero", price: "3.50" },
+        { name: "Coca Cola Light", price: "3.50" },
+        { name: "Schweppes Pink Grapefruit", price: "3.50" },
+        { name: "Schweppes Tropical", price: "3.50" },
+        { name: "Schweppes Pomegranate", price: "3.50" },
+        { name: "Three Cents Pink Grapefruit", price: "5.00" },
+        { name: "Red Bull 250ml", price: "5.00" },
+        { name: "Red Bull 355ml", price: "6.00" },
+        { name: "Monster Flavours", price: "5.00" },
         { name: "Powerade", price: "5.00" }
       ]
     },
     {
       name: "Beers",
       items: [
-        { name: "Alpha", price: "4.00" },
+        { name: "Alfa", price: "4.00" },
         { name: "Mamos", price: "4.50" },
         { name: "Heineken", price: "5.00" },
+        { name: "Heineken 0.0", price: "5.00" },
+        { name: "Fisher", price: "5.00" },
         { name: "Bud", price: "5.50" },
         { name: "Sol", price: "5.50" },
-        { name: "Erdinger", price: "6.00" },
-        { name: "Heineken 0.0%", price: "5.00" },
-        { name: "Fisher", price: "5.00" }
+        { name: "Erdinger", price: "6.00" }
       ]
     },
     {
@@ -120,7 +128,8 @@ const MenuSection = () => {
         {
           title: "Snacks & Sandwiches",
           items: [
-            { name: "Toast (Turkey/Ham & Cheese)", price: "3.00" },
+            { name: "Toast Turkey and Cheese", price: "3.00" },
+            { name: "Toast Ham and Cheese", price: "3.00" },
             { name: "Turkey Tortilla", price: "3.50", description: "Turkey, cheese, mayo, iceberg, tomato" },
             { name: "Chicken Tortilla", price: "4.00", description: "Tricolor peppers, cheddar sauce, chicken" },
             { name: "Classic Club Sandwich", price: "8.50", description: "Turkey, cheese, mayo, tomato, iceberg, bacon" },
@@ -130,9 +139,9 @@ const MenuSection = () => {
         {
           title: "French Fries",
           items: [
-            { name: "Classic Fries (Salt & Oregano)", price: "3.00" },
-            { name: "Cheddar Sauce Fries", price: "4.00" },
-            { name: "Cheddar & Bacon Fries", price: "5.00" }
+            { name: "Fries Classic", price: "3.00" },
+            { name: "Fries Cheddar Sauce", price: "4.00" },
+            { name: "Fries Cheddar and Bacon", price: "5.00" }
           ]
         },
         {
@@ -140,7 +149,7 @@ const MenuSection = () => {
           items: [
             { name: "Pork Gyros Plate", price: "7.50", description: "Fries, pork gyros, tomatoes, yogurt" },
             { name: "Chicken Gyros Plate", price: "8.50", description: "Fries, chicken gyros, yellow sauce, parmesan" },
-            { name: "Caesar Salad", price: "8.00" }
+            { name: "Caesar Salad", price: "8.00", description: "Iceberg, chicken, croutons, parmesan, Caesar dressing" }
           ]
         }
       ]
@@ -170,7 +179,7 @@ const MenuSection = () => {
             { name: "Bacardi Carta Blanca", price: "6.00" },
             { name: "Havana Club", price: "6.00" },
             { name: "Plantaray Original", price: "7.00" },
-            { name: "Havana Club Anejo Esp.", price: "8.00" },
+            { name: "Havana Club Anejo", price: "8.00" },
             { name: "Bacardi Reserva Ocho", price: "9.00" }
           ]
         },
@@ -183,47 +192,52 @@ const MenuSection = () => {
           ]
         },
         {
-          title: "Tequila & Mezcal",
+          title: "Tequila and Mezcal",
           items: [
             { name: "Olmeca Choco Fusion", price: "6.00" },
-            { name: "Cazadores Bianco / Reposado", price: "8.00" },
-            { name: "Gusano Rojo", price: "9.00" },
-            { name: "Del Maguey Vida", price: "10.00" }
+            { name: "Cazadores Bianco", price: "8.00" },
+            { name: "Cazadores Reposado", price: "8.00" },
+            { name: "Gusano Rojo (Mezcal)", price: "9.00" },
+            { name: "Del Maguey Vida (Mezcal)", price: "10.00" }
           ]
         },
         {
-          title: "Liquers",
+          title: "Liqueur",
           items: [
             { name: "Baileys", price: "6.00" },
             { name: "Malibu", price: "6.00" },
             { name: "Skinos Mastiqua", price: "6.00" },
             { name: "Disaronno Amaretto", price: "6.00" },
-            { name: "Sambuca Ramazzotti / Black", price: "6.00 / 7.00" }
+            { name: "Sambuca Ramazzotti", price: "6.00" },
+            { name: "Sambuca Black", price: "7.00" }
           ]
-        }
-      ]
-    },
-    {
-      name: "Local Spirits & Bar Options",
-      sections: [
+        },
         {
           title: "Local Spirits",
           items: [
             { name: "Ouzo Plomari 50ml", price: "4.00" },
-            { name: "Tsipouro Tsilili 50ml", price: "4.00" },
             { name: "Ouzo Plomari 200ml", price: "11.00" },
+            { name: "Tsipouro Tsilili 50ml", price: "4.00" },
             { name: "Tsipouro Tsilili 200ml", price: "13.00" }
           ]
         },
         {
           title: "Bar Options",
           items: [
-            { name: "Shot (Simple / Premium)", price: "2.50 / 3.50" },
+            { name: "Simple Shot", price: "2.50" },
+            { name: "Premium Shot", price: "3.50" },
             { name: "Sunken Shot on Beer", price: "4.00" },
             { name: "Cocktail Jug", price: "25.00" },
-            { name: "Sunken Shots Basket", price: "60.00" },
-            { name: "Bottle (Standard / Special)", price: "70 / 90" },
-            { name: "Bottle Premium", price: "120 / 140" }
+            { name: "Sunken Shots Basket", price: "60.00" }
+          ]
+        },
+        {
+          title: "Bottles",
+          items: [
+            { name: "Standard Bottle", price: "70.00" },
+            { name: "Special Bottle", price: "90.00" },
+            { name: "Premium Bottle", price: "120.00" },
+            { name: "Premium Plus Bottle", price: "140.00" }
           ]
         }
       ]
