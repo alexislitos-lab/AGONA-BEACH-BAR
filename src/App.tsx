@@ -65,7 +65,7 @@ const MenuSection = () => {
       name: "Coffee",
       items: [
         { name: "Greek Coffee", price: "2.50" },
-        { name: "Double Greek Coffee", price: "3.00" },
+        { name: "Double Greek", price: "3.00" },
         { name: "Espresso", price: "3.00" },
         { name: "Double Espresso", price: "3.50" },
         { name: "Freddo Espresso", price: "4.50" },
@@ -77,12 +77,29 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Frozen & Juices",
+      name: "Juices & Frozen",
       items: [
         { name: "Fresh Orange Juice", price: "4.00" },
-        { name: "Chocolate Frozen", price: "4.50" },
-        { name: "Oreo Vanilla Frozen", price: "4.50" },
-        { name: "Strawberry Frozen", price: "3.50" }
+        { name: "Oreo Vanilla & Biscuit Frozen", price: "4.50" },
+        { name: "Lacta Chocolate Frozen", price: "4.50" },
+        { name: "Strawberry Ice Pops", price: "3.50" }
+      ]
+    },
+    {
+      name: "Refreshments & Energy",
+      items: [
+        { name: "Iced Tea Lemon/Peach", price: "3.00" },
+        { name: "Coca Cola / Zero", price: "3.50" },
+        { name: "Fanta Orange/Blue/Lemon", price: "3.50" },
+        { name: "Sprite", price: "3.50" },
+        { name: "Schweppes Pink Grapefruit", price: "3.50" },
+        { name: "Schweppes Tropical Fusion", price: "3.50" },
+        { name: "Schweppes Pomegranate", price: "3.50" },
+        { name: "Schweppes Lemonade/Orange", price: "3.50" },
+        { name: "Three Cents (Cherry/Pink/Mandarin)", price: "5.00" },
+        { name: "Red Bull", price: "5.00 / 6.00" },
+        { name: "Monster Flavours", price: "5.00" },
+        { name: "Powerade", price: "5.00" }
       ]
     },
     {
@@ -94,22 +111,117 @@ const MenuSection = () => {
         { name: "Bud", price: "5.50" },
         { name: "Sol", price: "5.50" },
         { name: "Erdinger", price: "6.00" },
-        { name: "Heineken 0.0%", price: "5.00" }
+        { name: "Heineken 0.0%", price: "5.00" },
+        { name: "Fisher", price: "5.50" }
       ]
     },
     {
       name: "Kitchen Selection",
-      items: [
-        { name: "Toast", price: "3.00", description: "Turkey & cheese or ham & cheese" },
-        { name: "Turkey Tortilla", price: "3.50", description: "Turkey, cheese, mayo, iceberg, tomato" },
-        { name: "Chicken Tortilla", price: "4.00", description: "Tricolor peppers, cheddar sauce, chicken" },
-        { name: "Classic Club Sandwich", price: "8.50", description: "Turkey, cheese, mayo, tomato, iceberg, bacon" },
-        { name: "Chicken Club Sandwich", price: "9.50", description: "Cheese, bacon, tomato, iceberg, chicken, mayo" },
-        { name: "French Fries", price: "3.00", description: "Salt, oregano" },
-        { name: "Cheddar Fries", price: "4.00", description: "Cheddar sauce, chives" },
-        { name: "Cheddar & Bacon Fries", price: "5.00", description: "Cheddar sauce, bacon, chives" },
-        { name: "Pork Gyros Plate", price: "7.50", description: "Fries, pork gyros, seasoned tomatoes, yogurt sauce" },
-        { name: "Chicken Gyros Plate", price: "8.50", description: "Fries, chicken gyros, yellow sauce, parmesan, tomatoes" }
+      sections: [
+        {
+          title: "Snacks & Sandwiches",
+          items: [
+            { name: "Toast (Turkey/Ham & Cheese)", price: "3.00" },
+            { name: "Turkey Tortilla", price: "3.50", description: "Turkey, cheese, mayo, iceberg, tomato" },
+            { name: "Chicken Tortilla", price: "4.00", description: "Tricolor peppers, cheddar sauce, chicken" },
+            { name: "Classic Club Sandwich", price: "8.50", description: "Turkey, cheese, mayo, tomato, iceberg, bacon" },
+            { name: "Chicken Club Sandwich", price: "9.50", description: "Cheese, bacon, tomato, iceberg, chicken, mayo" },
+            { name: "Caesar Salad", price: "8.00" }
+          ]
+        },
+        {
+          title: "French Fries & Plates",
+          items: [
+            { name: "Classic Fries (Salt & Oregano)", price: "3.00" },
+            { name: "Cheddar Sauce Fries", price: "4.00" },
+            { name: "Cheddar & Bacon Fries", price: "5.00" },
+            { name: "Pork Gyros Plate", price: "7.50", description: "Fries, pork gyros, tomatoes, yogurt" },
+            { name: "Chicken Gyros Plate", price: "8.50", description: "Fries, chicken gyros, yellow sauce, parmesan" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Spirits",
+      sections: [
+        {
+          title: "Vodka",
+          items: [
+            { name: "Serkova", price: "6.00" },
+            { name: "42 Below", price: "7.00" },
+            { name: "Grey Goose", price: "10.00" }
+          ]
+        },
+        {
+          title: "Gin",
+          items: [
+            { name: "Beefeater", price: "6.00" },
+            { name: "Bombay Sapphire", price: "7.00" },
+            { name: "Hendrick's", price: "9.00" }
+          ]
+        },
+        {
+          title: "Rum",
+          items: [
+            { name: "Bacardi Carta Blanca", price: "6.00" },
+            { name: "Havana Club", price: "6.00" },
+            { name: "Plantaray Original", price: "7.00" },
+            { name: "Havana Club Anejo Esp.", price: "8.00" },
+            { name: "Bacardi Reserva Ocho", price: "9.00" }
+          ]
+        },
+        {
+          title: "Whiskey",
+          items: [
+            { name: "Dewar's", price: "6.00" },
+            { name: "Jack Daniel's", price: "7.00" },
+            { name: "Chivas Regal 12Y", price: "9.00" }
+          ]
+        },
+        {
+          title: "Tequila & Mezcal",
+          items: [
+            { name: "Olmeca Choco Fusion", price: "6.00" },
+            { name: "Cazadores Bianco / Reposado", price: "8.00" },
+            { name: "Gusano Rojo", price: "9.00" },
+            { name: "Del Maguey Vida", price: "10.00" }
+          ]
+        },
+        {
+          title: "Liquers",
+          items: [
+            { name: "Baileys", price: "6.00" },
+            { name: "Malibu", price: "6.00" },
+            { name: "Skinos Mastiqua", price: "6.00" },
+            { name: "Disaronno Amaretto", price: "6.00" },
+            { name: "Sambuca Ramazzotti / Black", price: "6.00 / 7.00" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Local Spirits & Bar Options",
+      sections: [
+        {
+          title: "Local Spirits",
+          items: [
+            { name: "Ouzo Plomari 50ml", price: "4.00" },
+            { name: "Tsipouro Tsilili 50ml", price: "4.00" },
+            { name: "Ouzo Plomari 200ml", price: "11.00" },
+            { name: "Tsipouro Tsilili 200ml", price: "13.00" }
+          ]
+        },
+        {
+          title: "Bar Options",
+          items: [
+            { name: "Shot (Simple / Premium)", price: "2.50 / 3.50" },
+            { name: "Sunken Shot on Beer", price: "4.00" },
+            { name: "Cocktail Jug", price: "25.00" },
+            { name: "Sunken Shots Basket", price: "60.00" },
+            { name: "Bottle (Standard / Special)", price: "70 / 90" },
+            { name: "Bottle Premium", price: "120 / 140" }
+          ]
+        }
       ]
     }
   ];
@@ -167,25 +279,57 @@ const MenuSection = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                     >
-                      <div className={`pb-12 px-6 grid grid-cols-1 ${category.name === 'Kitchen Selection' ? 'md:grid-cols-2 gap-x-12' : ''} gap-y-8 mt-4`}>
-                        {category.items.map((item, itemIdx) => (
-                          <motion.div 
-                            key={itemIdx}
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: itemIdx * 0.03 }}
-                            className="group cursor-default flex flex-col"
-                          >
-                            <div className="flex justify-between items-baseline mb-1">
-                              <h4 className="text-xl font-normal group-hover:text-coral transition-colors">{item.name}</h4>
-                              <div className="flex-grow mx-4 border-b border-ocean/5 border-dotted"></div>
-                              <span className="text-sm font-light opacity-60 italic">€{item.price}</span>
+                      <div className="pb-12 px-6 pt-6 space-y-12">
+                        {"sections" in category ? (
+                          category.sections.map((section: any, sIdx: number) => (
+                            <div key={sIdx} className="space-y-6">
+                              <h5 className="text-xs uppercase tracking-[0.2em] font-bold text-coral/80 border-l-2 border-coral pl-4">
+                                {section.title}
+                              </h5>
+                              <div className={`grid grid-cols-1 ${category.name === 'Kitchen Selection' ? 'md:grid-cols-2 gap-x-12' : ''} gap-y-8`}>
+                                {section.items.map((item: any, itemIdx: number) => (
+                                  <motion.div 
+                                    key={itemIdx}
+                                    initial={{ opacity: 0, x: -10 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: itemIdx * 0.03 }}
+                                    className="group cursor-default flex flex-col"
+                                  >
+                                    <div className="flex justify-between items-baseline mb-1">
+                                      <h4 className="text-xl font-normal group-hover:text-coral transition-colors">{item.name}</h4>
+                                      <div className="flex-grow mx-4 border-b border-ocean/5 border-dotted"></div>
+                                      <span className="text-sm font-light opacity-60 italic whitespace-nowrap">€{item.price}</span>
+                                    </div>
+                                    {'description' in item && (
+                                      <p className="text-xs font-light opacity-50 italic leading-relaxed">{item.description}</p>
+                                    )}
+                                  </motion.div>
+                                ))}
+                              </div>
                             </div>
-                            {'description' in item && (
-                              <p className="text-xs font-light opacity-50 italic leading-relaxed">{item.description}</p>
-                            )}
-                          </motion.div>
-                        ))}
+                          ))
+                        ) : (
+                          <div className={`grid grid-cols-1 ${category.name === 'Kitchen Selection' ? 'md:grid-cols-2 gap-x-12' : ''} gap-y-8`}>
+                            {category.items?.map((item: any, itemIdx: number) => (
+                              <motion.div 
+                                key={itemIdx}
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: itemIdx * 0.03 }}
+                                className="group cursor-default flex flex-col"
+                              >
+                                <div className="flex justify-between items-baseline mb-1">
+                                  <h4 className="text-xl font-normal group-hover:text-coral transition-colors">{item.name}</h4>
+                                  <div className="flex-grow mx-4 border-b border-ocean/5 border-dotted"></div>
+                                  <span className="text-sm font-light opacity-60 italic whitespace-nowrap">€{item.price}</span>
+                                </div>
+                                {'description' in item && (
+                                  <p className="text-xs font-light opacity-50 italic leading-relaxed">{item.description}</p>
+                                )}
+                              </motion.div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   )}
