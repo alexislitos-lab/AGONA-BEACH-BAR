@@ -6,7 +6,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Lenis from 'lenis';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'motion/react';
-import { Menu, X, Facebook, Instagram, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, MapPin, Phone, Mail, ArrowRight, ChevronRight } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,67 +58,69 @@ const Navbar = () => {
 };
 
 const MenuSection = () => {
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
+
   const menuCategories = [
     {
       name: "Coffee",
       items: [
-        { name: "Americano", price: "4" },
-        { name: "Double Espresso", price: "4" },
-        { name: "Freddo Espresso", price: "4.4" },
-        { name: "Freddo Cappuccino", price: "4.6" },
-        { name: "Iced Latte", price: "4" },
-        { name: "Frappe", price: "3.9" },
-        { name: "Nescafe", price: "3.9" },
-        { name: "Single Greek Coffee", price: "2.5" },
-        { name: "Double Greek Coffee", price: "3.5" },
-        { name: "Single Espresso", price: "2.2" },
-        { name: "Espresso Lungo", price: "2.4" },
-        { name: "Espresso Macchiato", price: "2.5" },
-        { name: "Single Cappuccino", price: "4.3" },
-        { name: "Double Cappuccino", price: "4.8" },
-        { name: "Hot Latte", price: "4.8" }
+        { name: "Greek Coffee", price: "2.50" },
+        { name: "Double Greek Coffee", price: "3.00" },
+        { name: "Espresso", price: "3.00" },
+        { name: "Double Espresso", price: "3.50" },
+        { name: "Freddo Espresso", price: "4.50" },
+        { name: "Freddo Cappuccino", price: "4.50" },
+        { name: "Cappuccino", price: "4.00" },
+        { name: "Double Cappuccino", price: "5.00" },
+        { name: "Latte Hot / Cold", price: "5.00" },
+        { name: "Frappe / Nes", price: "3.50" }
       ]
     },
     {
-      name: "Juices & Beverages",
+      name: "Frozen & Juices",
       items: [
-        { name: "Blueberry Banana Ginger", price: "4" },
-        { name: "Smooth Ginger Purple", price: "6" },
-        { name: "Amita Pineapple", price: "3.2" },
-        { name: "Amita Motion", price: "3.2" },
-        { name: "Banana Cherry Oat", price: "4" },
-        { name: "Strawberry Cherry Chia", price: "4" },
-        { name: "Fresh Mixed Juice", price: "4.5" },
-        { name: "Fresh Orange Juice", price: "4" },
-        { name: "Freddocino", price: "4.7" },
-        { name: "Lacta Chocolate", price: "4.5" },
-        { name: "Chillingo Oreo", price: "4.5" },
-        { name: "Strawberry Granita", price: "3.7" }
+        { name: "Fresh Orange Juice", price: "4.00" },
+        { name: "Chocolate Frozen", price: "4.50" },
+        { name: "Oreo Vanilla Frozen", price: "4.50" },
+        { name: "Strawberry Frozen", price: "3.50" }
       ]
     },
     {
       name: "Beers",
       items: [
-        { name: "Erdinger", price: "6" },
-        { name: "Fischer", price: "4.5" },
-        { name: "Heineken 0%", price: "4" },
-        { name: "Sol", price: "5" },
-        { name: "Beer Pitcher", price: "13" },
-        { name: "Bud", price: "5" },
-        { name: "Alfa", price: "4" },
-        { name: "Mamos", price: "4" },
-        { name: "Heineken", price: "4" },
-        { name: "Draft Alfa (Glass)", price: "3.5" },
-        { name: "Draft Mamos (Glass)", price: "3.5" },
-        { name: "Watermelon Breezer", price: "4" },
-        { name: "Lemon Breezer", price: "4" }
+        { name: "Alpha", price: "4.00" },
+        { name: "Mamos", price: "4.50" },
+        { name: "Heineken", price: "5.00" },
+        { name: "Bud", price: "5.50" },
+        { name: "Sol", price: "5.50" },
+        { name: "Erdinger", price: "6.00" },
+        { name: "Heineken 0.0%", price: "5.00" }
+      ]
+    },
+    {
+      name: "Kitchen Selection",
+      items: [
+        { name: "Toast", price: "3.00", description: "Turkey & cheese or ham & cheese" },
+        { name: "Turkey Tortilla", price: "3.50", description: "Turkey, cheese, mayo, iceberg, tomato" },
+        { name: "Chicken Tortilla", price: "4.00", description: "Tricolor peppers, cheddar sauce, chicken" },
+        { name: "Classic Club Sandwich", price: "8.50", description: "Turkey, cheese, mayo, tomato, iceberg, bacon" },
+        { name: "Chicken Club Sandwich", price: "9.50", description: "Cheese, bacon, tomato, iceberg, chicken, mayo" },
+        { name: "French Fries", price: "3.00", description: "Salt, oregano" },
+        { name: "Cheddar Fries", price: "4.00", description: "Cheddar sauce, chives" },
+        { name: "Cheddar & Bacon Fries", price: "5.00", description: "Cheddar sauce, bacon, chives" },
+        { name: "Pork Gyros Plate", price: "7.50", description: "Fries, pork gyros, seasoned tomatoes, yogurt sauce" },
+        { name: "Chicken Gyros Plate", price: "8.50", description: "Fries, chicken gyros, yellow sauce, parmesan, tomatoes" }
       ]
     }
   ];
 
+  const toggleCategory = (idx: number) => {
+    setExpandedIdx(expandedIdx === idx ? null : idx);
+  };
+
   return (
     <section id="menu" className="py-32 bg-offwhite px-6 md:px-24">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,29 +131,68 @@ const MenuSection = () => {
           <p className="text-xl font-light tracking-widest uppercase opacity-60">A taste of AGONA</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 lg:gap-x-16 gap-y-24">
-          {menuCategories.map((category, catIdx) => (
-            <motion.div 
-              key={catIdx}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: catIdx * 0.2 }}
-              className="space-y-12 relative lg:after:content-[''] lg:after:absolute lg:after:right-[-32px] lg:after:top-0 lg:after:bottom-0 lg:after:w-[1px] lg:after:bg-ocean/5 last:after:hidden"
-            >
-              <h3 className="text-3xl font-serif italic border-b border-ocean/10 pb-4">{category.name}</h3>
-              <div className="space-y-10">
-                {category.items.map((item, itemIdx) => (
-                  <div key={itemIdx} className="group cursor-default">
-                    <div className="flex justify-between items-baseline">
-                      <h4 className="text-xl font-normal group-hover:text-coral transition-colors">{item.name}</h4>
-                      <span className="text-sm font-light opacity-40">€{item.price}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+        <div className="space-y-6">
+          {menuCategories.map((category, catIdx) => {
+            const isOpen = expandedIdx === catIdx;
+            return (
+              <motion.div 
+                key={catIdx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: catIdx * 0.05 }}
+                className="border-b border-ocean/10 overflow-hidden"
+              >
+                <button 
+                  onClick={() => toggleCategory(catIdx)}
+                  className="w-full flex justify-between items-center py-8 group hover:bg-ocean/[0.02] transition-colors px-4 rounded-xl"
+                >
+                  <span className={`text-3xl md:text-4xl font-serif italic transition-all duration-500 ${isOpen ? 'text-coral scale-105 origin-left' : 'text-ocean opacity-80'}`}>
+                    {category.name}
+                  </span>
+                  <motion.div
+                    animate={{ rotate: isOpen ? 90 : 0 }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className={`transition-colors ${isOpen ? 'text-coral' : 'text-ocean opacity-30 group-hover:opacity-100'}`}
+                  >
+                    <ChevronRight size={32} strokeWidth={1} />
+                  </motion.div>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      <div className={`pb-12 px-6 grid grid-cols-1 ${category.name === 'Kitchen Selection' ? 'md:grid-cols-2 gap-x-12' : ''} gap-y-8 mt-4`}>
+                        {category.items.map((item, itemIdx) => (
+                          <motion.div 
+                            key={itemIdx}
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: itemIdx * 0.03 }}
+                            className="group cursor-default flex flex-col"
+                          >
+                            <div className="flex justify-between items-baseline mb-1">
+                              <h4 className="text-xl font-normal group-hover:text-coral transition-colors">{item.name}</h4>
+                              <div className="flex-grow mx-4 border-b border-ocean/5 border-dotted"></div>
+                              <span className="text-sm font-light opacity-60 italic">€{item.price}</span>
+                            </div>
+                            {'description' in item && (
+                              <p className="text-xs font-light opacity-50 italic leading-relaxed">{item.description}</p>
+                            )}
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -209,36 +250,28 @@ const Experience = () => {
     { 
       title: "Ice-Cold Drinks & Summer Beats", 
       description: "Sip on our signature cocktails while the best summer tracks set the mood for your perfect beach day.",
-      img: "https://i.ibb.co/VcR5GdWT/drink.jpg",
-      className: "rounded-[60px] md:rounded-[120px]",
       delay: 0
     },
     { 
       title: "Bites & Good Times", 
       description: "Delicious food made by us, using only the freshest local ingredients to bring you the true taste of the coast.",
-      img: "https://i.ibb.co/rRrFpm1J/food.jpg",
-      className: "rounded-[40px] md:rounded-[80px]",
       delay: 0.1
     },
     { 
       title: "Beach Volley & Non-Stop Action", 
       description: "Join the game on our professional courts. Whether you're a pro or just having fun, the energy is unmatched.",
-      img: "https://i.ibb.co/LXFwhCrs/beach.jpg",
-      className: "rounded-[60px] md:rounded-[120px]",
       delay: 0.2
     },
     { 
       title: "Beach Parties & Zero Stress", 
       description: "From daytime vibes to late-night energy, our parties are where the best memories are made. Unforgettable moments under the sky.",
-      img: "https://i.ibb.co/qMVwhQXz/mat.jpg",
-      className: "rounded-[40px] md:rounded-[80px]",
       delay: 0.3
     }
   ];
 
   return (
     <section id="experience" className="py-32 bg-offwhite overflow-hidden">
-      <div className="px-6 md:px-24 mb-20">
+      <div className="px-6 md:px-24 mb-24">
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -259,60 +292,31 @@ const Experience = () => {
         <div className="w-32 h-[2px] bg-coral"></div>
       </div>
 
-      <div className="px-6 md:px-24 space-y-32">
-        {features.map((feature, idx) => (
-          <div 
-            key={idx}
-            className={`group flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 md:gap-24`}
-          >
+      <div className="px-6 md:px-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-24">
+          {features.map((feature, idx) => (
             <motion.div 
-              initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              key={idx}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ 
                 duration: 1, 
+                delay: feature.delay,
                 ease: [0.22, 1, 0.36, 1]
               }}
-              className={`relative w-full md:w-1/2 aspect-[4/3] overflow-hidden select-none pointer-events-none transition-all duration-700 group-hover:scale-105 group-hover:z-10 will-change-transform ${feature.className}`}
+              className="relative pl-12 border-l border-ocean/10 py-4 group"
             >
-              <img 
-                src={feature.img} 
-                alt={feature.title} 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-ocean/5 group-hover:bg-ocean/20 transition-colors duration-500"></div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, x: idx % 2 === 0 ? 20 : -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="w-full md:w-1/3"
-            >
-              <span className="text-xs uppercase tracking-widest mb-4 block text-coral font-bold">0{idx + 1}</span>
-              <motion.h3 
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-3xl md:text-4xl font-serif italic mb-6 leading-tight text-ocean"
-              >
+              <span className="absolute left-[-8px] top-4 text-xs font-serif italic text-coral bg-offwhite px-2">0{idx + 1}</span>
+              <h3 className="text-3xl md:text-4xl font-serif italic mb-6 leading-tight text-ocean transition-colors group-hover:text-coral duration-500">
                 {feature.title}
-              </motion.h3>
-              <motion.p 
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-ocean/70 leading-relaxed font-light text-lg"
-              >
+              </h3>
+              <p className="text-ocean/70 leading-relaxed font-light text-lg">
                 {feature.description}
-              </motion.p>
+              </p>
             </motion.div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -365,7 +369,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-3">
               <Mail size={20} className="flex-shrink-0" />
-              <span>hello@agonabeachbar.gr</span>
+              <a href="mailto:agonabeachbar@gmail.com" className="hover:text-coral transition-colors">agonabeachbar@gmail.com</a>
             </div>
           </div>
         </div>
