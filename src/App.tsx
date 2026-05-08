@@ -257,15 +257,15 @@ const MenuSection = () => {
               >
                 <button 
                   onClick={() => toggleCategory(catIdx)}
-                  className="w-full flex justify-between items-center py-8 group hover:bg-ocean/[0.02] transition-colors px-4 rounded-xl"
+                  className="w-full flex justify-between items-center py-8 group hover:bg-ocean/[0.02] transition-colors px-4 rounded-xl text-left"
                 >
-                  <span className={`text-3xl md:text-4xl font-serif italic transition-all duration-500 ${isOpen ? 'text-coral scale-105 origin-left' : 'text-ocean opacity-80'}`}>
+                  <span className={`text-2xl sm:text-3xl md:text-4xl font-serif italic transition-all duration-500 pr-4 ${isOpen ? 'text-coral scale-105 origin-left' : 'text-ocean opacity-80'}`}>
                     {category.name}
                   </span>
                   <motion.div
                     animate={{ rotate: isOpen ? 90 : 0 }}
                     transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                    className={`transition-colors ${isOpen ? 'text-coral' : 'text-ocean opacity-30 group-hover:opacity-100'}`}
+                    className={`flex-shrink-0 transition-colors ${isOpen ? 'text-coral' : 'text-ocean opacity-30 group-hover:opacity-100'}`}
                   >
                     <ChevronRight size={32} strokeWidth={1} />
                   </motion.div>
