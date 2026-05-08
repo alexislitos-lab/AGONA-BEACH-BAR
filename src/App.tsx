@@ -64,41 +64,40 @@ const MenuSection = () => {
     {
       name: "Coffee",
       items: [
-        { name: "Greek Coffee", price: "2.50" },
-        { name: "Double Greek", price: "3.00" },
-        { name: "Espresso", price: "3.00" },
-        { name: "Double Espresso", price: "3.50" },
-        { name: "Freddo Espresso", price: "4.50" },
-        { name: "Freddo Cappuccino", price: "4.50" },
-        { name: "Cappuccino", price: "4.00" },
-        { name: "Double Cappuccino", price: "5.00" },
-        { name: "Latte Hot / Cold", price: "5.00" },
-        { name: "Frappe / Nes", price: "3.50" }
+        { name: "Greek Coffee", price: "2.00" },
+        { name: "Double Greek", price: "3.50" },
+        { name: "Espresso", price: "2.20" },
+        { name: "Double Espresso", price: "4.00" },
+        { name: "Espresso Lungo", price: "2.40" },
+        { name: "Espresso Macchiato", price: "2.50" },
+        { name: "Americano", price: "4.00" },
+        { name: "Freddo Espresso", price: "4.40" },
+        { name: "Freddo Cappuccino", price: "4.60" },
+        { name: "Cappuccino", price: "4.30" },
+        { name: "Double Cappuccino", price: "4.80" },
+        { name: "Latte Hot", price: "4.80" },
+        { name: "Latte Cold", price: "4.60" },
+        { name: "Frappe / Nes", price: "3.90" }
       ]
     },
     {
       name: "Juices & Frozen",
       items: [
+        { name: "Strawberry Ice Pops", price: "3.70" },
         { name: "Fresh Orange Juice", price: "4.00" },
-        { name: "Oreo Vanilla & Biscuit Frozen", price: "4.50" },
-        { name: "Lacta Chocolate Frozen", price: "4.50" },
-        { name: "Strawberry Ice Pops", price: "3.50" }
+        { name: "Chillino Oreo", price: "4.50" },
+        { name: "Lacta Chocolate", price: "4.50" }
       ]
     },
     {
-      name: "Refreshments & Energy",
+      name: "Soft Drinks & Energy",
       items: [
-        { name: "Iced Tea Lemon/Peach", price: "3.00" },
-        { name: "Coca Cola / Zero", price: "3.50" },
-        { name: "Fanta Orange/Blue/Lemon", price: "3.50" },
-        { name: "Sprite", price: "3.50" },
-        { name: "Schweppes Pink Grapefruit", price: "3.50" },
-        { name: "Schweppes Tropical Fusion", price: "3.50" },
-        { name: "Schweppes Pomegranate", price: "3.50" },
-        { name: "Schweppes Lemonade/Orange", price: "3.50" },
-        { name: "Three Cents (Cherry/Pink/Mandarin)", price: "5.00" },
+        { name: "Iced Tea / Fuze Tea", price: "3.00 / 5.00" },
+        { name: "Coca Cola / Zero / Light", price: "3.50" },
+        { name: "Schweppes", price: "3.50" },
+        { name: "Three Cents", price: "5.00" },
         { name: "Red Bull", price: "5.00 / 6.00" },
-        { name: "Monster Flavours", price: "5.00" },
+        { name: "Monster", price: "5.00" },
         { name: "Powerade", price: "5.00" }
       ]
     },
@@ -112,7 +111,7 @@ const MenuSection = () => {
         { name: "Sol", price: "5.50" },
         { name: "Erdinger", price: "6.00" },
         { name: "Heineken 0.0%", price: "5.00" },
-        { name: "Fisher", price: "5.50" }
+        { name: "Fisher", price: "5.00" }
       ]
     },
     {
@@ -125,18 +124,23 @@ const MenuSection = () => {
             { name: "Turkey Tortilla", price: "3.50", description: "Turkey, cheese, mayo, iceberg, tomato" },
             { name: "Chicken Tortilla", price: "4.00", description: "Tricolor peppers, cheddar sauce, chicken" },
             { name: "Classic Club Sandwich", price: "8.50", description: "Turkey, cheese, mayo, tomato, iceberg, bacon" },
-            { name: "Chicken Club Sandwich", price: "9.50", description: "Cheese, bacon, tomato, iceberg, chicken, mayo" },
-            { name: "Caesar Salad", price: "8.00" }
+            { name: "Chicken Club Sandwich", price: "9.50", description: "Cheese, bacon, tomato, iceberg, chicken, mayo" }
           ]
         },
         {
-          title: "French Fries & Plates",
+          title: "French Fries",
           items: [
             { name: "Classic Fries (Salt & Oregano)", price: "3.00" },
             { name: "Cheddar Sauce Fries", price: "4.00" },
-            { name: "Cheddar & Bacon Fries", price: "5.00" },
+            { name: "Cheddar & Bacon Fries", price: "5.00" }
+          ]
+        },
+        {
+          title: "Main Plates",
+          items: [
             { name: "Pork Gyros Plate", price: "7.50", description: "Fries, pork gyros, tomatoes, yogurt" },
-            { name: "Chicken Gyros Plate", price: "8.50", description: "Fries, chicken gyros, yellow sauce, parmesan" }
+            { name: "Chicken Gyros Plate", price: "8.50", description: "Fries, chicken gyros, yellow sauce, parmesan" },
+            { name: "Caesar Salad", price: "8.00" }
           ]
         }
       ]
