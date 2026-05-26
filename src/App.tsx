@@ -531,10 +531,10 @@ const MenuSection = () => {
         </motion.div>
 
         {/* Tab Selector */}
-        <div className="flex justify-center mb-16 border-b border-ocean/10 max-w-sm mx-auto relative px-4">
+        <div className="flex items-center justify-center mb-16 border-b border-ocean/10 max-w-md mx-auto relative px-2 sm:px-4">
           <button 
             onClick={() => { setActiveTab('drinks'); setExpandedIdx(null); }}
-            className={`flex-1 pb-4 text-xs uppercase tracking-[0.25em] font-bold text-center relative transition-colors duration-300 cursor-pointer ${activeTab === 'drinks' ? 'text-coral' : 'text-ocean/40 hover:text-ocean'}`}
+            className={`flex-1 pb-4 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-bold text-center relative transition-colors duration-300 cursor-pointer ${activeTab === 'drinks' ? 'text-coral' : 'text-ocean/40 hover:text-ocean'}`}
           >
             Drinks & Spirits
             {activeTab === 'drinks' && (
@@ -545,9 +545,13 @@ const MenuSection = () => {
               />
             )}
           </button>
+          
+          {/* Subtle vertical separator centered with the text */}
+          <div className="h-4 w-[1px] bg-ocean/20 mb-4 self-end" />
+
           <button 
             onClick={() => { setActiveTab('food'); setExpandedIdx(null); }}
-            className={`flex-1 pb-4 text-xs uppercase tracking-[0.25em] font-bold text-center relative transition-colors duration-300 cursor-pointer ${activeTab === 'food' ? 'text-coral' : 'text-ocean/40 hover:text-ocean'}`}
+            className={`flex-1 pb-4 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-bold text-center relative transition-colors duration-300 cursor-pointer ${activeTab === 'food' ? 'text-coral' : 'text-ocean/40 hover:text-ocean'}`}
           >
             Food & Desserts
             {activeTab === 'food' && (
