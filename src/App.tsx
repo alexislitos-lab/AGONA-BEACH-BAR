@@ -63,7 +63,7 @@ const MenuSection = () => {
 
   const menuCategories = [
     {
-      name: "Coffee, Fresh Juices & Smoothies",
+      name: "Coffee",
       sections: [
         {
           title: "Coffee",
@@ -82,6 +82,20 @@ const MenuSection = () => {
           ]
         },
         {
+          title: "Frozen Delights",
+          items: [
+            { name: "Strawberry Ice Pops", price: "3.50" },
+            { name: "Oreo Vanilla & Biscuit", price: "4.50" },
+            { name: "Lacta Chocolate", price: "4.50" },
+            { name: "Freddoccino", price: "5.00" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Fresh Juices & Smoothies",
+      sections: [
+        {
           title: "Fresh Juices",
           items: [
             { name: "Homemade Lemonade", price: "4.00" },
@@ -90,15 +104,6 @@ const MenuSection = () => {
             { name: "Ginger Berry Boost", price: "6.00", description: "Blueberries, banana, ginger" },
             { name: "Cherry Oat Blender", price: "6.00", description: "Banana, sour cherry, oat" },
             { name: "Chia Strawberry Fusion", price: "6.00", description: "Cherries, chia, strawberries" }
-          ]
-        },
-        {
-          title: "Frozen Delights",
-          items: [
-            { name: "Strawberry Ice Pops", price: "3.50" },
-            { name: "Oreo Vanilla & Biscuit", price: "4.50" },
-            { name: "Lacta Chocolate", price: "4.50" },
-            { name: "Freddoccino", price: "5.00" }
           ]
         },
         {
@@ -506,13 +511,14 @@ const MenuSection = () => {
     menuCategories[3],
     menuCategories[4],
     menuCategories[5],
-    menuCategories[6]
+    menuCategories[6],
+    menuCategories[7]
   ];
 
   const foodCategories = [
-    { ...menuCategories[7], name: "Snacks & Light Meals" },
-    { ...menuCategories[8], name: "Main Plates & Salads" },
-    menuCategories[9]
+    { ...menuCategories[8], name: "Snacks & Light Meals" },
+    { ...menuCategories[9], name: "Main Plates & Salads" },
+    menuCategories[10]
   ];
 
   const currentCategories = activeTab === 'drinks' ? drinksCategories : foodCategories;
