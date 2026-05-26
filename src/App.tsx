@@ -116,15 +116,15 @@ const MenuSection = () => {
         {
           title: "Refreshments",
           items: [
-            { name: "Iced Tea (Glass) Lemon/Peach", price: "3.00" },
-            { name: "Coca Cola Zero/Light (250ml)", price: "3.50" },
-            { name: "Fanta Orange/Blue/Lemon (250ml)", price: "3.50" },
+            { name: "Iced Tea (Glass)", price: "3.00", description: "Lemon / Peach" },
+            { name: "Coca Cola (250ml)", price: "3.50", description: "Zero / Light" },
+            { name: "Fanta (250ml)", price: "3.50", description: "Orange / Blue / Lemon" },
             { name: "Sprite (250ml)", price: "3.50" },
             { name: "Schweppes (330ml)", price: "3.50", description: "Pink Grapefruit / Tropical Fusion / Pomegrenade / Lemonade Bergamont / Orange Blossom" },
             { name: "Perrier (330ml)", price: "4.00" },
             { name: "Arizona (450ml)", price: "5.00", description: "Green Tea & Honey / Pomegrenade / Blueberry / Green Tea Zero Sugar" },
-            { name: "Fuze Lemon/Peach/Passion Fruit Zero (500ml)", price: "5.00" },
-            { name: "Three Cents Cherry Soda (200ml)", price: "5.00", description: "Cherry Soda / Pink Grapefruit / Aegean Tonic / Mandarin & Bergamont" }
+            { name: "Fuze Tea (500ml)", price: "5.00", description: "Lemon / Peach / Passion Fruit Zero" },
+            { name: "Three Cents (200ml)", price: "5.00", description: "Cherry Soda / Pink Grapefruit / Aegean Tonic / Mandarin & Bergamont" }
           ]
         },
         {
@@ -132,7 +132,7 @@ const MenuSection = () => {
           items: [
             { name: "Red Bull (250ml)", price: "5.00" },
             { name: "Red Bull (355ml)", price: "6.00" },
-            { name: "Powerade Orange/Raspberry (500ml)", price: "5.00" },
+            { name: "Powerade (500ml)", price: "5.00", description: "Orange / Raspberry" },
             { name: "Monster (500ml)", price: "5.00", description: "Energy / Absolut Zero / Ultra / Fiesta Mango / Full Throttle / Pipeline Punch / Juiced Mango" }
           ]
         }
@@ -170,11 +170,31 @@ const MenuSection = () => {
         {
           title: "Low-Zero Zone",
           items: [
-            { name: "Amstel Redler (330ml) Radler 2% alc.", price: "4.00" },
+            { name: "Amstel Radler (330ml)", price: "4.00", description: "Radler 2% alc." },
             { name: "Μηλοκλέφτης 4.5% alc.", price: "4.00" },
             { name: "Heineken 0% (330ml) Non alcohol", price: "5.00" },
             { name: "Smirnoff Ice 4.5% alc.", price: "5.50" },
             { name: "Bacardi Breezer 4.5% alc.", price: "5.50", description: "Watermelon / Orange / Lemon" }
+          ]
+        },
+        {
+          title: "Special Offers: Pitcher Draught",
+          items: [
+            { name: "Pitcher Draught ΑΛΦΑ 1.5L", price: "12.00" },
+            { name: "Pitcher Draught ΜΑΜΟΣ 1.5L", price: "14.00" },
+            { name: "Pitcher Draught ERDINGER 1.5L", price: "20.00" }
+          ]
+        },
+        {
+          title: "Special Offers: Beer Buckets",
+          items: [
+            { name: "ΑΛΦΑ Bucket (4x330ml)", price: "14.00" },
+            { name: "ΜΑΜΟΣ Bucket (4x330ml)", price: "16.00" },
+            { name: "Heineken Bucket (4x330ml)", price: "18.00" },
+            { name: "Fisher Bucket (4x330ml)", price: "18.00", description: "With extra alcohol +5.00" },
+            { name: "Sol Bucket (4x330ml)", price: "20.00" },
+            { name: "Bud Bucket (4x330ml)", price: "20.00" },
+            { name: "Erdinger Bucket (4x330ml)", price: "22.00" }
           ]
         }
       ]
@@ -225,7 +245,7 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Spirits & Liqueurs",
+      name: "Spirits",
       sections: [
         {
           title: "Vodka",
@@ -317,7 +337,7 @@ const MenuSection = () => {
         {
           title: "Wines",
           items: [
-            { name: "Semeli Oreinos Hlios (187ml) (White/Red)", price: "8.50" },
+            { name: "Semeli Oreinos Hlios (187ml)", price: "8.50", description: "White / Red" },
             { name: "Cavalieri Lazaridi (White)", price: "55.00", description: "Dry, Sauvignon Blanc, Ugni Blanc, Asyrtiko" },
             { name: "Idylle d'achinos (Rose)", price: "55.00", description: "Dry, Grenache, Syrah, Agiorgitiko" },
             { name: "Biblia Chora (Red)", price: "55.00", description: "Dry, Merlot, Cabernet Sauvignon, Agiorgitiko" }
@@ -343,7 +363,7 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Bar List & Special Offers",
+      name: "Bar List",
       sections: [
         {
           title: "Bar List",
@@ -355,26 +375,6 @@ const MenuSection = () => {
             { name: "Bottle", price: "70.00" },
             { name: "Bottle Special", price: "85.00" },
             { name: "Bottle Premium", price: "120.00 / 140.00" }
-          ]
-        },
-        {
-          title: "Special Offers: Pitcher Draught",
-          items: [
-            { name: "Pitcher Draught ΑΛΦΑ 1.5L", price: "12.00" },
-            { name: "Pitcher Draught ΜΑΜΟΣ 1.5L", price: "14.00" },
-            { name: "Pitcher Draught ERDINGER 1.5L", price: "20.00" }
-          ]
-        },
-        {
-          title: "Special Offers: Beer Buckets",
-          items: [
-            { name: "ΑΛΦΑ Bucket (4x330ml)", price: "14.00" },
-            { name: "ΜΑΜΟΣ Bucket (4x330ml)", price: "16.00" },
-            { name: "Heineken Bucket (4x330ml)", price: "18.00" },
-            { name: "Fisher Bucket (4x330ml)", price: "18.00", description: "With extra alcohol +5.00" },
-            { name: "Sol Bucket (4x330ml)", price: "20.00" },
-            { name: "Bud Bucket (4x330ml)", price: "20.00" },
-            { name: "Erdinger Bucket (4x330ml)", price: "22.00" }
           ]
         }
       ]
