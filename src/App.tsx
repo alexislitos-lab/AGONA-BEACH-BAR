@@ -80,20 +80,11 @@ const MenuSection = () => {
             { name: "Cappuccino freddo", price: "4.50" },
             { name: "Latte hot/cold", price: "5.00" }
           ]
-        },
-        {
-          title: "Frozen Delights",
-          items: [
-            { name: "Strawberry Ice Pops", price: "3.50" },
-            { name: "Oreo Vanilla & Biscuit", price: "4.50" },
-            { name: "Lacta Chocolate", price: "4.50" },
-            { name: "Freddoccino", price: "5.00" }
-          ]
         }
       ]
     },
     {
-      name: "Fresh Juices & Smoothies",
+      name: "Fresh juices & Smoothies",
       sections: [
         {
           title: "Fresh Juices",
@@ -140,11 +131,20 @@ const MenuSection = () => {
             { name: "Powerade (500ml)", price: "5.00", description: "Orange / Raspberry" },
             { name: "Monster (500ml)", price: "5.00", description: "Energy / Absolut Zero / Ultra / Fiesta Mango / Full Throttle / Pipeline Punch / Juiced Mango" }
           ]
+        },
+        {
+          title: "Frozen Delights",
+          items: [
+            { name: "Strawberry Ice Pops", price: "3.50" },
+            { name: "Oreo Vanilla & Biscuit", price: "4.50" },
+            { name: "Lacta Chocolate", price: "4.50" },
+            { name: "Freddoccino", price: "5.00" }
+          ]
         }
       ]
     },
     {
-      name: "Beers & Low-Alcohol",
+      name: "Beers",
       sections: [
         {
           title: "Draught",
@@ -337,7 +337,24 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Wine, Sparkling & Champagnes",
+      name: "Bar list",
+      sections: [
+        {
+          title: "Bar List",
+          items: [
+            { name: "Shot", price: "3.00" },
+            { name: "Sunken Shot on Beer", price: "4.50" },
+            { name: "Cocktail Jug", price: "25.00" },
+            { name: "Sunken Shots on Beer Basket", price: "60.00" },
+            { name: "Bottle", price: "70.00" },
+            { name: "Bottle Special", price: "85.00" },
+            { name: "Bottle Premium", price: "120.00 / 140.00" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Wine, Sparkling & Champagne",
       sections: [
         {
           title: "Wines",
@@ -368,24 +385,7 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Bar List",
-      sections: [
-        {
-          title: "Bar List",
-          items: [
-            { name: "Shot", price: "3.00" },
-            { name: "Sunken Shot on Beer", price: "4.50" },
-            { name: "Cocktail Jug", price: "25.00" },
-            { name: "Sunken Shots on Beer Basket", price: "60.00" },
-            { name: "Bottle", price: "70.00" },
-            { name: "Bottle Special", price: "85.00" },
-            { name: "Bottle Premium", price: "120.00 / 140.00" }
-          ]
-        }
-      ]
-    },
-    {
-      name: "Food Menu: Snacks & Light Meals",
+      name: "Snacks & More",
       sections: [
         {
           title: "Snacks & More",
@@ -413,20 +413,6 @@ const MenuSection = () => {
             { name: "Chicken Sandwich", price: "5.50", description: "Μπαγκέτα λεύκη με κοτόπουλο ψητό, gouda, μαρούλι, τομάτα & chicken σως" },
             { name: "Nugget Sandwich", price: "6.00", description: "Ψωμί brioche με φιλέτα από παναρισμένο στήθος κοτόπουλο, flakes παρμεζάνας, iceberg, τομάτα & chicken σως" }
           ]
-        }
-      ]
-    },
-    {
-      name: "Food Menu: Main Plates & Salads",
-      sections: [
-        {
-          title: "Salads",
-          items: [
-            { name: "Greek Dakos", price: "7.50", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, πιπεριά & κάπαρη" },
-            { name: "Pear & Orange", price: "8.00", description: "Ανάμεικτη σαλάτα με φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών" },
-            { name: "Caesar's", price: "8.50", description: "Κοτόπουλο ψητό με παρμεζάνα, μαρούλι, iceberg, κρουτόν & σως caesar" },
-            { name: "Quinoa", price: "9.00", description: "Κινόα με αβοκάντο, πορτοκάλι, κάσιους, κράνμπερις, αγγουράκι & vinaigrette εσπεριδοειδών" }
-          ]
         },
         {
           title: "Omelettes",
@@ -441,15 +427,34 @@ const MenuSection = () => {
             { name: "Club Sandwich", price: "8.50", description: "Ψωμί του τοστ με γαλοπούλα, τυρί gouda, μπέικον, μαρούλι, τομάτα, μαγιονέζα & πατάτες τηγανιτές" },
             { name: "Chicken Club Sandwich", price: "9.50", description: "Ψωμί του τοστ με φιλέτο από κοτόπουλο στη σχάρα, τυρί gouda, μπέικον, μαρούλι, τομάτα, μαγιονέζα και πατάτες τηγανιτές" }
           ]
-        },
+        }
+      ]
+    },
+    {
+      name: "Salads - Pasta",
+      sections: [
         {
-          title: "Burgers",
+          title: "Salads",
           items: [
-            { name: "Cheese", price: "8.00", description: "Ψωμί brioche με μπιφτέκι 100% μοσχαρίσιο (160gr), τυρί gouda, κέτσαπ, μαγιονέζα, μουστάρδα & πατάτες τηγανιτές" },
-            { name: "Crispy Chicken", price: "10.00", description: "Ψωμί brioche με φιλέτο από παναρισμένο στήθος κοτόπουλο, flakes παρμεζάνας, μαρούλι, τομάτα, iceberg & chicken σως" },
-            { name: "Big House", price: "12.00", description: "Ψωμί brioche με μπιφτέκι 100% μοσχαρίσιο (160gr), αυγό, τυρί cheddar, καραμελωμένα κρεμμύδια, μαρούλι, τομάτα, iceberg, & πατάτες τηγανιτές" }
+            { name: "Greek Dakos", price: "7.50", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, πιπεριά & κάπαρη" },
+            { name: "Pear & Orange", price: "8.00", description: "Ανάμεικτη σαλάτα με φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών" },
+            { name: "Caesar's", price: "8.50", description: "Κοτόπουλο ψητό με παρμεζάνα, μαρούλι, iceberg, κρουτόν & σως caesar" },
+            { name: "Quinoa", price: "9.00", description: "Κινόα με αβοκάντο, πορτοκάλι, κάσιους, κράνμπερις, αγγουράκι & vinaigrette εσπεριδοειδών" }
           ]
         },
+        {
+          title: "Pasta",
+          items: [
+            { name: "Fusilli Pesto", price: "9.00", description: "Pasta fusilli με flakes παρμεζάνας, σάλτσα πέστο, ρόκα, τοματίνια & αρωματισμένο ελαιόλαδο" },
+            { name: "Fusilli Chef", price: "9.50", description: "Pasta fusilli με τριμένο αυγό, gouda, ζαμπόν, τομάτα, αγγούρι και pink σως" },
+            { name: "Fusilli Caesar's", price: "10.00", description: "Pasta fusilli με μπέικον, flakes παρμεζάνας, καλαμπόκι, caesar σως & αρωματισμένο ελαιόλαδο" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Pizza - Burgers",
+      sections: [
         {
           title: "Pizza",
           items: [
@@ -460,13 +465,18 @@ const MenuSection = () => {
           ]
         },
         {
-          title: "Pasta",
+          title: "Burgers",
           items: [
-            { name: "Fusilli Pesto", price: "9.00", description: "Pasta fusilli με flakes παρμεζάνας, σάλτσα πέστο, ρόκα, τοματίνια & αρωματισμένο ελαιόλαδο" },
-            { name: "Fusilli Chef", price: "9.50", description: "Pasta fusilli με τριμένο αυγό, gouda, ζαμπόν, τομάτα, αγγούρι και pink σως" },
-            { name: "Fusilli Caesar's", price: "10.00", description: "Pasta fusilli με μπέικον, flakes παρμεζάνας, καλαμπόκι, caesar σως & αρωματισμένο ελαιόλαδο" }
+            { name: "Cheese", price: "8.00", description: "Ψωμί brioche με μπιφτέκι 100% μοσχαρίσιο (160gr), τυρί gouda, κέτσαπ, μαγιονέζα, μουστάρδα & πατάτες τηγανιτές" },
+            { name: "Crispy Chicken", price: "10.00", description: "Ψωμί brioche με φιλέτο από παναρισμένο στήθος κοτόπουλο, flakes παρμεζάνας, μαρούλι, τομάτα, iceberg & chicken σως" },
+            { name: "Big House", price: "12.00", description: "Ψωμί brioche με μπιφτέκι 100% μοσχαρίσιο (160gr), αυγό, τυρί cheddar, καραμελωμένα κρεμμύδια, μαρούλι, τομάτα, iceberg, & πατάτες τηγανιτές" }
           ]
-        },
+        }
+      ]
+    },
+    {
+      name: "Main Plates",
+      sections: [
         {
           title: "Meat Meals",
           items: [
@@ -479,7 +489,7 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Desserts & Fruits",
+      name: "Fruits - Desserts",
       sections: [
         {
           title: "Fruit Salads",
@@ -516,9 +526,11 @@ const MenuSection = () => {
   ];
 
   const foodCategories = [
-    { ...menuCategories[8], name: "Snacks & Light Meals" },
-    { ...menuCategories[9], name: "Main Plates & Salads" },
-    menuCategories[10]
+    menuCategories[8],
+    menuCategories[9],
+    menuCategories[10],
+    menuCategories[11],
+    menuCategories[12]
   ];
 
   const currentCategories = activeTab === 'drinks' ? drinksCategories : foodCategories;
