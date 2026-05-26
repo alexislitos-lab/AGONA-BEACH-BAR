@@ -98,6 +98,15 @@ const MenuSection = () => {
           ]
         },
         {
+          title: "Frozen Delights",
+          items: [
+            { name: "Strawberry Ice Pops", price: "3.50" },
+            { name: "Oreo Vanilla & Biscuit", price: "4.50" },
+            { name: "Lacta Chocolate", price: "4.50" },
+            { name: "Freddoccino", price: "5.00" }
+          ]
+        },
+        {
           title: "Smoothies",
           items: [
             { name: "Red Rum", price: "7.00", description: "Strawberries, cherries, chia, vanilla ice cream" },
@@ -130,15 +139,6 @@ const MenuSection = () => {
             { name: "Red Bull (355ml)", price: "6.00" },
             { name: "Powerade (500ml)", price: "5.00", description: "Orange / Raspberry" },
             { name: "Monster (500ml)", price: "5.00", description: "Energy / Absolut Zero / Ultra / Fiesta Mango / Full Throttle / Pipeline Punch / Juiced Mango" }
-          ]
-        },
-        {
-          title: "Frozen Delights",
-          items: [
-            { name: "Strawberry Ice Pops", price: "3.50" },
-            { name: "Oreo Vanilla & Biscuit", price: "4.50" },
-            { name: "Lacta Chocolate", price: "4.50" },
-            { name: "Freddoccino", price: "5.00" }
           ]
         }
       ]
