@@ -175,11 +175,11 @@ const MenuSection = () => {
         {
           title: "Low-Zero Zone",
           items: [
-            { name: "Amstel Radler (330ml) 2% alc.", price: "4.00" },
-            { name: "Μηλοκλέφτης 4.5% alc.", price: "4.00" },
+            { name: "Amstel Radler (330ml) 2% alc.", price: "4.50" },
+            { name: "Μηλοκλέφτης (330ml) 4.5% alc.", price: "4.50" },
             { name: "Heineken 0% (330ml) Non alcohol", price: "5.00" },
-            { name: "Smirnoff Ice 4.5% alc.", price: "5.50" },
-            { name: "Bacardi Breezer 4.5% alc.", price: "5.50", description: "Watermelon / Orange / Lemon" }
+            { name: "Smirnoff Ice (275ml) 4.5% alc.", price: "5.50" },
+            { name: "Bacardi Breezer (275ml) 4.5% alc.", price: "5.50", description: "Watermelon / Orange / Lemon" }
           ]
         },
         {
@@ -210,12 +210,12 @@ const MenuSection = () => {
         {
           title: "Spritz & Zero",
           items: [
-            { name: "Aperol Spritz", price: "8.00", description: "Aperol, Prosecco, Soda" },
-            { name: "ST Germain Spritz", price: "8.50", description: "ST Germain Elderflower liqueur, Prosecco, Soda" },
-            { name: "Blue Pulse", price: "9.00", description: "Blueberries, Mint leaves, Isotonic, Red bull" },
+            { name: "Aperol Spritz", price: "7.50", description: "Aperol, Prosecco, Soda" },
+            { name: "ST Germain Spritz", price: "10.00", description: "ST Germain Elderflower liqueur, Prosecco, Soda" },
+            { name: "Blue Pulse", price: "8.00", description: "Blueberries, Mint leaves, Isotonic, Red bull" },
             { name: "Caribbean Spritz", price: "8.50", description: "Aperol, Prosecco, Melon liqueur, Mango liqueur, Lime juice" },
             { name: "Still Jazz", price: "8.50", description: "Mastique, Moscato d'asti, Jasmin syrup, Lime juice" },
-            { name: "Island Zero", price: "9.00", description: "Tanqueray 0.0, Lime juice, Almond, Cucumber slices, Pineapple cubes, Ginger beer" },
+            { name: "Island Zero", price: "8.00", description: "Tanqueray 0.0, Lime juice, Almond, Cucumber slices, Pineapple cubes, Ginger beer" },
             { name: "Summer Mirage", price: "8.50", description: "Aperol, Mastique, Pink grapefruit soda, Lime juice, Strawberry liqueur" }
           ]
         },
@@ -234,8 +234,8 @@ const MenuSection = () => {
           title: "Classics",
           items: [
             { name: "Espresso Martini", price: "9.00", description: "Vodka, Kahlua, Espresso, Sugar syrup" },
-            { name: "Mojito", price: "10.00", description: "Rum, Lime wedges, Brown sugar, Mint, Soda" },
-            { name: "Pornstar Martini", price: "10.00", description: "Vodka, Passion fruit puree, Passion liqueur, Vanilla, Lime juice" },
+            { name: "Mojito", price: "9.00", description: "Rum, Lime wedges, Brown sugar, Mint, Soda" },
+            { name: "Pornstar Martini", price: "11.00", description: "Vodka, Passion fruit puree, Passion liqueur, Vanilla, Lime juice" },
             { name: "Negroni", price: "9.00", description: "Gin, Bitters, Red vermouth" },
             { name: "Mai Tai", price: "10.00", description: "Rum, Almond, Lime, Orange liqueur" },
             { name: "Bramble", price: "10.00", description: "Gin, Crème de mûre liqueur, Sugar syrup, Lemon juice" },
@@ -243,7 +243,7 @@ const MenuSection = () => {
             { name: "Daiquiri Strawberry", price: "10.00", description: "Rum, Strawberry liqueur, Strawberry puree, Sugar syrup" },
             { name: "Paloma", price: "10.00", description: "Tequila, Lime juice, Agave syrup, Pink grapefruit soda" },
             { name: "Caipirinia", price: "9.00", description: "Cachaça, Lime wedges, Brown sugar" },
-            { name: "Long Island", price: "10.00", description: "Vodka, Rum, Gin, Orange liqueur, Lime juice, Sugar syrup, Cola" },
+            { name: "Long Island", price: "11.00", description: "Vodka, Rum, Gin, Orange liqueur, Lime juice, Sugar syrup, Cola" },
             { name: "Zombie", price: "12.00", description: "Blended Rum, Falernum liqueur, Cinnamon syrup, Lime juice, Grapefruit juice, Passion fruit puree, Pineapple puree" }
           ]
         }
@@ -390,7 +390,7 @@ const MenuSection = () => {
         {
           title: "Snacks & More",
           items: [
-            { name: "Toast", price: "3.50", description: "Ψωμί του τοστ, γαλόπουλα, gouda και τομάτα" },
+            { name: "Toast", price: "3.50", description: "Ψωμί του τοστ, gouda & γαλόπουλα" },
             { name: "Hot Dog", price: "3.50", description: "Ψωμί αφράτο, λουκάνικο, κέτσαπ, μουστάρδα" },
             { name: "Crispy Fries", price: "4.00", description: "Μερίδα πατάτες τηγανιτές" },
             { name: "Cheddar Bacon Fries", price: "5.00", description: "Μερίδα πατάτες τηγανιτές με cheddar & bacon" },
