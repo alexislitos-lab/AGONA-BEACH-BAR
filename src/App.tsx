@@ -175,7 +175,7 @@ const MenuSection = () => {
         {
           title: "Low-Zero Zone",
           items: [
-            { name: "Amstel Radler (330ml)", price: "4.00", description: "Radler 2% alc." },
+            { name: "Amstel Radler (330ml) 2% alc.", price: "4.00" },
             { name: "Μηλοκλέφτης 4.5% alc.", price: "4.00" },
             { name: "Heineken 0% (330ml) Non alcohol", price: "5.00" },
             { name: "Smirnoff Ice 4.5% alc.", price: "5.50" },
