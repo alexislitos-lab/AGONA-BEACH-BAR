@@ -6,7 +6,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Lenis from 'lenis';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'motion/react';
-import { Menu, X, Facebook, Instagram, MapPin, Phone, Mail, ArrowRight, ChevronRight } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, MapPin, Phone, Mail, ArrowRight, ChevronRight, Users, Leaf } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -116,7 +116,7 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Refreshments & Energy Drinks",
+      name: "Refreshments & RTD’s",
       sections: [
         {
           title: "Refreshments",
@@ -140,6 +140,13 @@ const MenuSection = () => {
             { name: "Powerade (500ml)", price: "5.00", description: "Orange / Raspberry" },
             { name: "Monster (500ml)", price: "5.00", description: "Energy / Absolut Zero / Ultra / Fiesta Mango / Full Throttle / Pipeline Punch / Juiced Mango" }
           ]
+        },
+        {
+          title: "Pre-mixed",
+          items: [
+            { name: "Smirnoff Ice (275ml)", price: "5.50", description: "4.5% alc." },
+            { name: "Bacardi Breezer (275ml)", price: "5.50", description: "Watermelon / Orange / Lemon (4.5% alc.)" }
+          ]
         }
       ]
     },
@@ -149,45 +156,43 @@ const MenuSection = () => {
         {
           title: "Draught",
           items: [
-            { name: "ΑΛΦΑ (300ml) Lager 5% alc.", price: "3.00" },
-            { name: "ΜΑΜΟΣ (300ml) Pilsner 5% alc.", price: "3.50" },
-            { name: "ERDINGER (300ml) Weiss 5.3% alc.", price: "5.00" }
+            { name: "ΑΛΦΑ (300ml)", price: "3.00", description: "Lager 5% alc." },
+            { name: "ΜΑΜΟΣ (300ml)", price: "3.50", description: "Pilsner 5% alc." },
+            { name: "ERDINGER (300ml)", price: "5.00", description: "Weiss 5.3% alc." }
           ]
         },
         {
           title: "Local Craft",
           items: [
-            { name: "ΑΛΦΑ (330ml) Lager 5% alc.", price: "4.00" },
-            { name: "ΜΑΜΟΣ (330ml) Pilsner 5% alc.", price: "4.50" }
+            { name: "ΑΛΦΑ (330ml)", price: "4.00", description: "Lager 5% alc." },
+            { name: "ΜΑΜΟΣ (330ml)", price: "4.50", description: "Pilsner 5% alc." }
           ]
         },
         {
           title: "Internationals",
           items: [
-            { name: "Heineken (330ml) Lager 5% alc.", price: "5.00" },
-            { name: "Fisher (330ml) Pilsner 5% alc.", price: "5.00" },
-            { name: "Sol (330ml) Lager 4.5% alc.", price: "5.50" },
-            { name: "Bud (330ml) Lager 5% alc.", price: "5.50" },
-            { name: "Erdinger (330ml) Weiss 5.3% alc.", price: "6.00" },
-            { name: "Septem 8th Day (330ml) IPA 7% alc.", price: "7.00" }
+            { name: "Heineken (330ml)", price: "5.00", description: "Lager 5% alc." },
+            { name: "Fisher (330ml)", price: "5.00", description: "Pilsner 5% alc." },
+            { name: "Sol (330ml)", price: "5.50", description: "Lager 4.5% alc." },
+            { name: "Bud (330ml)", price: "5.50", description: "Lager 5% alc." },
+            { name: "Erdinger (330ml)", price: "6.00", description: "Weiss 5.3% alc." },
+            { name: "Septem 8th Day (330ml)", price: "7.00", description: "IPA 7% alc." }
           ]
         },
         {
           title: "Low-Zero Zone",
           items: [
-            { name: "Amstel Radler (330ml) 2% alc.", price: "4.50" },
-            { name: "Μηλοκλέφτης (330ml) 4.5% alc.", price: "4.50" },
-            { name: "Heineken 0% (330ml) Non alcohol", price: "5.00" },
-            { name: "Smirnoff Ice (275ml) 4.5% alc.", price: "5.50" },
-            { name: "Bacardi Breezer (275ml) 4.5% alc.", price: "5.50", description: "Watermelon / Orange / Lemon" }
+            { name: "Amstel Radler (330ml)", price: "4.50", description: "Radler 2% alc." },
+            { name: "Μηλοκλέφτης (330ml)", price: "4.50", description: "4.5% alc." },
+            { name: "Heineken 0% (330ml)", price: "5.00", description: "Non alcohol" }
           ]
         },
         {
           title: "Special Offers: Pitcher Draught",
           items: [
-            { name: "Pitcher Draught ΑΛΦΑ 1.5L", price: "12.00" },
-            { name: "Pitcher Draught ΜΑΜΟΣ 1.5L", price: "14.00" },
-            { name: "Pitcher Draught ERDINGER 1.5L", price: "20.00" }
+            { name: "Pitcher Draught ΑΛΦΑ 1.5L", price: "12.00", description: "With extra alcohol +5.00" },
+            { name: "Pitcher Draught ΜΑΜΟΣ 1.5L", price: "14.00", description: "With extra alcohol +5.00" },
+            { name: "Pitcher Draught ERDINGER 1.5L", price: "20.00", description: "With extra alcohol +5.00" }
           ]
         },
         {
@@ -196,7 +201,7 @@ const MenuSection = () => {
             { name: "ΑΛΦΑ Bucket (4x330ml)", price: "14.00" },
             { name: "ΜΑΜΟΣ Bucket (4x330ml)", price: "16.00" },
             { name: "Heineken Bucket (4x330ml)", price: "18.00" },
-            { name: "Fisher Bucket (4x330ml)", price: "18.00", description: "With extra alcohol +5.00" },
+            { name: "Fisher Bucket (4x330ml)", price: "18.00" },
             { name: "Sol Bucket (4x330ml)", price: "20.00" },
             { name: "Bud Bucket (4x330ml)", price: "20.00" },
             { name: "Erdinger Bucket (4x330ml)", price: "22.00" }
@@ -211,23 +216,12 @@ const MenuSection = () => {
           title: "Spritz & Zero",
           items: [
             { name: "Aperol Spritz", price: "7.50", description: "Aperol, Prosecco, Soda" },
-            { name: "ST Germain Spritz", price: "10.00", description: "ST Germain Elderflower liqueur, Prosecco, Soda" },
             { name: "Blue Pulse", price: "8.00", description: "Blueberries, Mint leaves, Isotonic, Red bull" },
+            { name: "Island Zero", price: "8.00", description: "Tanqueray 0.0, Lime juice, Almond, Cucumber slices, Pineapple cubes, Ginger beer" },
             { name: "Caribbean Spritz", price: "8.50", description: "Aperol, Prosecco, Melon liqueur, Mango liqueur, Lime juice" },
             { name: "Still Jazz", price: "8.50", description: "Mastique, Moscato d'asti, Jasmin syrup, Lime juice" },
-            { name: "Island Zero", price: "8.00", description: "Tanqueray 0.0, Lime juice, Almond, Cucumber slices, Pineapple cubes, Ginger beer" },
-            { name: "Summer Mirage", price: "8.50", description: "Aperol, Mastique, Pink grapefruit soda, Lime juice, Strawberry liqueur" }
-          ]
-        },
-        {
-          title: "Signature",
-          items: [
-            { name: "Scarlet Kiss", price: "11.00", description: "Vodka, Agave syrup, Strawberry, Strawberry puree, Lime juice, Basil leaves" },
-            { name: "Tizzy Mezcal", price: "12.00", description: "Tequila bianco, Mezcal, Lime juice, Cucumber syrup, Chili syrup, Mango liqueur" },
-            { name: "Salted Desire", price: "12.00", description: "Infused butter Tequila, Grapefruit foam, Lime juice, Sugar syrup, Soda" },
-            { name: "Dark Matter", price: "11.00", description: "Rum, Sambuca black, Lychee liqueur, Lime juice, Sugar syrup" },
-            { name: "Banana Punch", price: "12.00", description: "Infused Tequila, Banana & strawberry flavors, Lime juice, Sugar syrup, Milk" },
-            { name: "Hendrick's Verde", price: "12.00", description: "Hendrick's Gin, Cucumber, Sugar syrup, Lime, Ginger, Mint, Soda" }
+            { name: "Summer Mirage", price: "8.50", description: "Aperol, Mastique, Pink grapefruit soda, Lime juice, Strawberry liqueur" },
+            { name: "ST Germain Spritz", price: "10.00", description: "ST Germain Elderflower liqueur, Prosecco, Soda" }
           ]
         },
         {
@@ -235,16 +229,27 @@ const MenuSection = () => {
           items: [
             { name: "Espresso Martini", price: "9.00", description: "Vodka, Kahlua, Espresso, Sugar syrup" },
             { name: "Mojito", price: "9.00", description: "Rum, Lime wedges, Brown sugar, Mint, Soda" },
-            { name: "Pornstar Martini", price: "11.00", description: "Vodka, Passion fruit puree, Passion liqueur, Vanilla, Lime juice" },
             { name: "Negroni", price: "9.00", description: "Gin, Bitters, Red vermouth" },
+            { name: "Margarita", price: "9.00", description: "Tequila, Orange liqueur, Lime" },
+            { name: "Caipirinia", price: "9.00", description: "Cachaça, Lime wedges, Brown sugar" },
             { name: "Mai Tai", price: "10.00", description: "Rum, Almond, Lime, Orange liqueur" },
             { name: "Bramble", price: "10.00", description: "Gin, Crème de mûre liqueur, Sugar syrup, Lemon juice" },
-            { name: "Margarita", price: "9.00", description: "Tequila, Orange liqueur, Lime" },
             { name: "Daiquiri Strawberry", price: "10.00", description: "Rum, Strawberry liqueur, Strawberry puree, Sugar syrup" },
             { name: "Paloma", price: "10.00", description: "Tequila, Lime juice, Agave syrup, Pink grapefruit soda" },
-            { name: "Caipirinia", price: "9.00", description: "Cachaça, Lime wedges, Brown sugar" },
+            { name: "Pornstar Martini", price: "11.00", description: "Vodka, Passion fruit puree, Passion liqueur, Vanilla, Lime juice" },
             { name: "Long Island", price: "11.00", description: "Vodka, Rum, Gin, Orange liqueur, Lime juice, Sugar syrup, Cola" },
             { name: "Zombie", price: "12.00", description: "Blended Rum, Falernum liqueur, Cinnamon syrup, Lime juice, Grapefruit juice, Passion fruit puree, Pineapple puree" }
+          ]
+        },
+        {
+          title: "Signature",
+          items: [
+            { name: "Scarlet Kiss", price: "11.00", description: "Vodka, Agave syrup, Strawberry, Strawberry puree, Lime juice, Basil leaves" },
+            { name: "Dark Matter", price: "11.00", description: "Rum, Sambuca black, Lychee liqueur, Lime juice, Sugar syrup" },
+            { name: "Tizzy Mezcal", price: "12.00", description: "Tequila bianco, Mezcal, Lime juice, Cucumber syrup, Chili syrup, Mango liqueur" },
+            { name: "Salted Desire", price: "12.00", description: "Infused butter Tequila, Grapefruit foam, Lime juice, Sugar syrup, Soda" },
+            { name: "Banana Punch", price: "12.00", description: "Infused Tequila, Banana & strawberry flavors, Lime juice, Sugar syrup, Milk" },
+            { name: "Hendrick's Verde", price: "12.00", description: "Hendrick's Gin, Cucumber, Sugar syrup, Lime, Ginger, Mint, Soda" }
           ]
         }
       ]
@@ -268,16 +273,6 @@ const MenuSection = () => {
             { name: "Bombay Dry", price: "8.00" },
             { name: "Bombay Sapphire", price: "9.00" },
             { name: "Hendrick's", price: "10.00" }
-          ]
-        },
-        {
-          title: "Whiskey",
-          items: [
-            { name: "Dewar's", price: "7.00" },
-            { name: "Johnnie Walker Red Label", price: "7.00" },
-            { name: "Jack Daniel's", price: "8.00" },
-            { name: "Chivas Regal 12y", price: "10.00" },
-            { name: "Johnnie Walker Black Label 12y", price: "10.00" }
           ]
         },
         {
@@ -309,6 +304,16 @@ const MenuSection = () => {
           items: [
             { name: "Gusano Rojo", price: "10.00" },
             { name: "Del Maguey Vida", price: "12.00" }
+          ]
+        },
+        {
+          title: "Whiskey",
+          items: [
+            { name: "Dewar's", price: "7.00" },
+            { name: "Johnnie Walker Red Label", price: "7.00" },
+            { name: "Jack Daniel's", price: "8.00" },
+            { name: "Chivas Regal 12y", price: "10.00" },
+            { name: "Johnnie Walker Black Label 12y", price: "10.00" }
           ]
         },
         {
@@ -401,8 +406,8 @@ const MenuSection = () => {
           title: "Tortilla Wraps",
           items: [
             { name: "Classic Wrap", price: "4.50", description: "Πίτα tortilla με γαλόπουλα, gouda, μαρούλι, τομάτα & μαγιονέζα" },
-            { name: "Garden Vegie Wrap", price: "5.00", description: "Πίτα tortilla με μανιτάρια, πιπεριές tricolor, κρεμμύδι σοτέ, σκόρδο & μαϊντανό" },
-            { name: "Chicken Cheddar Wrap", price: "5.50", description: "Πίτα tortilla με κοτόπουλο ψητό, gouda, πιπεριές σοτέ & cheddar σως" },
+            { name: "Garden Vegie Wrap", price: "5.00", description: "Πίτα tortilla με μανιτάρια, πιπεριές tricolor, κρεμμύδι σοτέ, σκόρδο & μαϊντανό", isVegan: true, isVegetarian: true },
+            { name: "Chicken Cheddar Wrap", price: "5.50", description: "Πίτα tortilla με κοτόπουλο ψητό, πιπεριές σοτέ & cheddar σως" },
             { name: "Tacos (3pcs)", price: "7.50", description: "Chili Beef Tacos / Chicken Tacos / Veggie Tacos" }
           ]
         },
@@ -417,8 +422,8 @@ const MenuSection = () => {
         {
           title: "Omelettes",
           items: [
-            { name: "Scrambled Omelette", price: "7.00", description: "Ψωμάκι ζυμωτό με αυγά scrambled και σχινόπρασο, συνοδευόμενο από πράσινη σαλάτα & τοματίνια" },
-            { name: "Big Breakfast Omelette", price: "8.00", description: "Ψωμάκι ζυμωτό με αυγά scrambled, smash avocado, flakes παρμεζάνας και σχινόπρασο, συνοδευόμενο από πράσινη σαλάτα & τοματίνια" }
+            { name: "Scrambled Omelette", price: "7.00", description: "Ψωμάκι ζυμωτό με αυγά scrable και σχινόπρασο, συνοδευόμενο από πράσινη σαλάτα & τοματίνια" },
+            { name: "Big Breakfast Omelette", price: "8.00", description: "Ψωμάκι ζυμωτό με αυγά scrable, smash avocado, flakes παρμεζάνας και σχινόπρασο, συνοδευόμενο από πράσινη σαλάτα & τοματίνια" }
           ]
         },
         {
@@ -436,16 +441,16 @@ const MenuSection = () => {
         {
           title: "Salads",
           items: [
-            { name: "Greek Dakos", price: "7.50", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, πιπεριά & κάπαρη" },
-            { name: "Pear & Orange", price: "8.00", description: "Ανάμεικτη σαλάτα με φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών" },
-            { name: "Caesar's", price: "8.50", description: "Κοτόπουλο ψητό με παρμεζάνα, μαρούλι, iceberg, κρουτόν & σως caesar" },
+            { name: "Greek Dakos", price: "7.50", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, αγγούρι, πιπεριά & κάπαρη", isVegetarian: true },
+            { name: "Pear & Orange", price: "8.00", description: "Ανάμεικτη σαλάτα με φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών", isVegan: true, isVegetarian: true },
+            { name: "Caesar's", price: "8.50", description: "Κοτόπουλο ψητό με παρμεζάνα, μπέικον, καλαμπόκι, μαρούλι, iceberg, κρουτόν & σως caesar" },
             { name: "Quinoa", price: "9.00", description: "Κινόα με αβοκάντο, πορτοκάλι, κάσιους, κράνμπερις, αγγουράκι & vinaigrette εσπεριδοειδών" }
           ]
         },
         {
           title: "Pasta",
           items: [
-            { name: "Fusilli Pesto", price: "9.00", description: "Pasta fusilli με flakes παρμεζάνας, σάλτσα πέστο, ρόκα, τοματίνια & αρωματισμένο ελαιόλαδο" },
+            { name: "Fusilli Pesto", price: "9.00", description: "Pasta fusilli με flakes παρμεζάνας, σάλτσα πέστο, ρόκα, τοματίνια & αρωματισμένο ελαιόλαδο", isVegetarian: true },
             { name: "Fusilli Chef", price: "9.50", description: "Pasta fusilli με τριμένο αυγό, gouda, ζαμπόν, τομάτα, αγγούρι και pink σως" },
             { name: "Fusilli Caesar's", price: "10.00", description: "Pasta fusilli με μπέικον, flakes παρμεζάνας, καλαμπόκι, caesar σως & αρωματισμένο ελαιόλαδο" }
           ]
@@ -458,18 +463,18 @@ const MenuSection = () => {
         {
           title: "Pizza",
           items: [
-            { name: "Margherita", price: "10.00", description: "Σάλτσα τομάτας, mozzarella & φρέσκος βασιλικός" },
-            { name: "Greca", price: "11.50", description: "Φέτα, τομάτα, κρεμμύδι, πράσινη πιπεριά, ελιές & ρίγανη" },
+            { name: "Margherita", price: "10.00", description: "Σάλτσα τομάτας, mozzarella & φρέσκος βασιλικός", isVegetarian: true },
+            { name: "Greca", price: "11.50", description: "Φέτα, τομάτα, κρεμμύδι, πράσινη πιπεριά, ελιές & ρίγανη", isVegetarian: true },
             { name: "Special", price: "12.50", description: "Σάλτσα τομάτας, mozzarella, ζαμπόν, μπέικον, πράσινη πιπεριά & μανιτάρια" },
-            { name: "Bianca", price: "13.50", description: "Κρέμα γάλακτος, mozzarella, φιλέτο κοτόπουλο, μπέικον & μανιτάρια" }
+            { name: "Bianca", price: "13.50", description: "Κρέμα γάλακτος, mozzarella, φιλέτο κοτόπουλο & μανιτάρια" }
           ]
         },
         {
           title: "Burgers",
           items: [
-            { name: "Cheese", price: "8.00", description: "Ψωμί brioche με μπιφτέκι 100% μοσχαρίσιο (160gr), τυρί gouda, κέτσαπ, μαγιονέζα, μουστάρδα & πατάτες τηγανιτές" },
-            { name: "Crispy Chicken", price: "10.00", description: "Ψωμί brioche με φιλέτο από παναρισμένο στήθος κοτόπουλο, flakes παρμεζάνας, μαρούλι, τομάτα, iceberg & chicken σως" },
-            { name: "Big House", price: "12.00", description: "Ψωμί brioche με μπιφτέκι 100% μοσχαρίσιο (160gr), αυγό, τυρί cheddar, καραμελωμένα κρεμμύδια, μαρούλι, τομάτα, iceberg, & πατάτες τηγανιτές" }
+            { name: "Cheese", price: "8.00", description: "Ψωμί brioche με μπιφτέκι 100% μοσχαρίσιο (160gr), τυρί gouda, κέτσαπ, μαγιονέζα, μουστάρδα & πατάτες τηγανητές" },
+            { name: "Crispy Chicken", price: "10.00", description: "Ψωμί brioche με φιλέτο από παναρισμένο στήθος κοτόπουλο, flakes παρμεζάνας, τομάτα, iceberg & chicken σως" },
+            { name: "Big House", price: "12.00", description: "Ψωμί brioche με μπιφτέκι 100% μοσχαρίσιο (160gr), αυγό, τυρί cheddar, καραμελωμένα κρεμμύδια, τομάτα, iceberg, & πατάτες τηγανητές" }
           ]
         }
       ]
@@ -481,9 +486,9 @@ const MenuSection = () => {
           title: "Meat Meals",
           items: [
             { name: "Greek Gyros Bowl (Pork)", price: "8.50", description: "Γύρος χοιρινός με τομάτα, κρεμμύδι, σχινόπρασο, μυρωδικά & σως γιαουρτιού" },
-            { name: "Greek Gyros Bowl (Chicken)", price: "9.50", description: "Γύρος κοτόπουλο με τομάτα, κρεμμύδι, σχινόπρασο, μυρωδικά & σως γιαουρτιού" },
-            { name: "Beef Patties", price: "13.00", description: "Δύο μοσχαρίσια μπιφτέκια των 200gr, σερβιριζόμενα με ανάμεικτη σαλάτα ή πατάτες τηγανιτές" },
-            { name: "Mix Grill", price: "18.00", description: "Φιλέτο κοτόπουλο σχάρας, λουκάνικο, μπιφτέκι, γύρος χοιρινός, γύρος κοτόπουλο, πιτούλες & πατάτες τηγανιτές" }
+            { name: "Greek Gyros Bowl (Chicken)", price: "9.50", description: "Γύρος κοτόπουλο με τομάτα, κρεμμύδι, iceberg, σχινόπρασο, μυρωδικά & σως γιαουρτιού" },
+            { name: "Beef Patties", price: "13.00", description: "Δύο μοσχαρίσια μπιφτέκια των 200gr, σερβιριζόμενα με ανάμεικτη σαλάτα ή πατάτες τηγανητές" },
+            { name: "Mix Grill", price: "18.00", description: "Φιλέτο κοτόπουλο σχάρας, λουκάνικο, μπιφτέκι, γύρος χοιρινός, γύρος κοτόπουλο, πιτούλες & πατάτες τηγανητές", isForTwo: true }
           ]
         }
       ]
@@ -496,7 +501,7 @@ const MenuSection = () => {
           items: [
             { name: "Fruit Salad Bowl", price: "6.00", description: "Μπανάνα, καρπούζι, πεπόνι, σταφύλι" },
             { name: "Oat & Yogurt Energy Bowl", price: "8.00", description: "Μπανάνα, μήλο, ανανά, μέλι, ταχίνι, mousse γιαουρτιού αρωματισμένη με λεμόνι & βρώσιμα άνθη" },
-            { name: "Fruit Salad Plate", price: "18.00", description: "Καρπούζι, πεπόνι, σταφύλι, ανανάς, κεράσια, ακτινίδιο, passion fruit" }
+            { name: "Fruit Salad Plate", price: "18.00", description: "Καρπούζι, πεπόνι, σταφύλι, ανανάς, κεράσια, ακτινίδιο, passion fruit", isForTwo: true }
           ]
         },
         {
@@ -634,7 +639,25 @@ const MenuSection = () => {
                                   className="group cursor-default flex flex-col"
                                 >
                                   <div className="flex justify-between items-baseline mb-1">
-                                    <h4 className="text-xl font-normal group-hover:text-coral transition-colors">{item.name}</h4>
+                                    <h4 className="text-xl font-normal group-hover:text-coral transition-colors flex flex-wrap items-center gap-2">
+                                      <span>{item.name}</span>
+                                      {item.isForTwo && (
+                                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-coral bg-coral/5 border border-coral/10 px-2.5 py-0.5 rounded-full" title="Για 2 άτομα">
+                                          <Users size={11} className="text-coral" />
+                                          <span className="text-[10px] font-sans font-medium leading-none">2 ατόμων</span>
+                                        </span>
+                                      )}
+                                      {item.isVegan && (
+                                        <span className="inline-flex items-center gap-1 text-[9px] font-bold text-emerald-800 bg-emerald-100/40 border border-emerald-200/50 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                          <span>Vegan</span>
+                                        </span>
+                                      )}
+                                      {item.isVegetarian && (
+                                        <span className="inline-flex items-center gap-1 text-[9px] font-bold text-emerald-800 bg-emerald-100/40 border border-emerald-200/50 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                                          <span>Vegetarian</span>
+                                        </span>
+                                      )}
+                                    </h4>
                                     <div className="flex-grow mx-4 border-b border-ocean/5 border-dotted"></div>
                                     <span className="text-sm font-light opacity-60 italic whitespace-nowrap">€{item.price}</span>
                                   </div>
