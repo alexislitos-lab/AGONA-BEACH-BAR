@@ -25,6 +25,30 @@ const Navbar = () => {
     { name: 'Contact', href: '#footer' }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: -15 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+      }
+    }
+  };
+
   return (
     <nav className={`fixed top-0 left-0 w-full z-[60] px-4 md:px-6 transition-all duration-500 flex justify-between items-center ${
       isScrolled 
@@ -42,17 +66,38 @@ const Navbar = () => {
         AGONA
       </motion.div>
 
-      <div className="flex space-x-3 md:space-x-12">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="flex space-x-3 md:space-x-12"
+      >
         {menuItems.map((item) => (
-          <a 
+          <motion.a 
+            variants={itemVariants}
             key={item.name} 
             href={item.href}
-            className="text-[9px] md:text-sm uppercase tracking-[0.1em] md:tracking-[0.2em] hover:italic transition-all"
+            whileHover={{ scale: 1.05 }}
+            className="relative pb-1 text-[9px] md:text-sm uppercase tracking-[0.1em] md:tracking-[0.2em] font-semibold hover:italic transition-all duration-300"
           >
-            {item.name}
-          </a>
+            <span>{item.name}</span>
+            {/* Elegant attention-grabbing highlight line below each item on entrance */}
+            <motion.span 
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ 
+                scaleX: [0, 1.2, 1, 0], 
+                opacity: [0, 1, 1, 0] 
+              }}
+              transition={{ 
+                delay: 1.0, 
+                duration: 1.8, 
+                ease: "easeInOut" 
+              }}
+              className="absolute bottom-0 left-0 right-0 h-[2px] bg-coral origin-center rounded-full"
+            />
+          </motion.a>
         ))}
-      </div>
+      </motion.div>
     </nav>
   );
 };
@@ -144,7 +189,6 @@ const MenuSection = () => {
         {
           title: "Pre-mixed",
           items: [
-            { name: "Smirnoff Ice (275ml)", price: "5.50", description: "4.5% alc." },
             { name: "Bacardi Breezer (275ml)", price: "5.50", description: "Watermelon / Orange / Lemon (4.5% alc.)" }
           ]
         }
@@ -508,7 +552,7 @@ const MenuSection = () => {
           title: "Desserts",
           items: [
             { name: "Greek Orange Pie", price: "4.00", description: "Extra ice cream + 1.50" },
-            { name: "Yogart Cheesecake", price: "4.50" }
+            { name: "Yogurt Cheesecake", price: "4.50" }
           ]
         }
       ]
@@ -816,14 +860,6 @@ const Footer = () => {
           <p className="opacity-70 font-light max-w-xs">
             Refined summer living on the shores of Agioi Apostoloi, Kalamos. Join us for an unforgettable AGONA experience.
           </p>
-          <div className="flex space-x-6">
-            <a href="https://www.facebook.com/agonabeachbar/photos?locale=el_GR" target="_blank" rel="noopener noreferrer" className="hover:text-coral transition-colors">
-              <Facebook size={24} />
-            </a>
-            <a href="https://www.instagram.com/agonabeachbar/" target="_blank" rel="noopener noreferrer" className="hover:text-coral transition-colors">
-              <Instagram size={24} />
-            </a>
-          </div>
         </div>
 
         <div className="space-y-6">
@@ -849,11 +885,19 @@ const Footer = () => {
             <p>For reservations, table bookings and inquiries:</p>
             <div className="flex items-center space-x-3">
               <Phone size={20} className="flex-shrink-0" />
-              <a href="tel:2295080422" className="text-xl font-medium hover:text-coral transition-colors">2295080422</a>
+              <a href="tel:2295080422" className="hover:text-coral transition-colors">2295080422</a>
             </div>
             <div className="flex items-center space-x-3">
               <Mail size={20} className="flex-shrink-0" />
               <a href="mailto:agonabeachbar@gmail.com" className="hover:text-coral transition-colors">agonabeachbar@gmail.com</a>
+            </div>
+            <div className="flex space-x-6 pt-3">
+              <a href="https://www.facebook.com/agonabeachbar/photos?locale=el_GR" target="_blank" rel="noopener noreferrer" className="hover:text-coral transition-colors">
+                <Facebook size={20} />
+              </a>
+              <a href="https://www.instagram.com/agonabeachbar/" target="_blank" rel="noopener noreferrer" className="hover:text-coral transition-colors">
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
         </div>
