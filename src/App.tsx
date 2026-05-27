@@ -551,7 +551,7 @@ const MenuSection = () => {
         {
           title: "Desserts",
           items: [
-            { name: "Greek Orange Pie", price: "4.00", description: "Extra ice cream + 1.50" },
+            { name: "Orange Pie", price: "4.00", description: "Extra ice cream + 1.50" },
             { name: "Yogurt Cheesecake", price: "4.50" }
           ]
         }
