@@ -810,7 +810,7 @@ const Footer = () => {
 
   return (
     <footer id="footer" className="bg-ocean text-offwhite py-24 px-6 md:px-24">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-serif tracking-widest">AGONA</h2>
           <p className="opacity-70 font-light max-w-xs">
@@ -837,33 +837,23 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-coral transition-colors"
               >
-                Γ. Μπιθικώτση, Άγιοι Απόστολοι 190 14
+                G. Mpithikotsi, Agii Apostoli, 19014
               </a>
             </div>
           </div>
         </div>
 
         <div className="space-y-6">
-          <h4 className="text-lg font-medium uppercase tracking-widest text-coral">Contact</h4>
+          <h4 className="text-lg font-medium uppercase tracking-widest text-coral">Contact - Booking</h4>
           <div className="space-y-4 opacity-70 font-light">
+            <p>For reservations, table bookings and inquiries:</p>
             <div className="flex items-center space-x-3">
               <Phone size={20} className="flex-shrink-0" />
-              <a href="tel:2295080422" className="hover:text-coral transition-colors">2295080422</a>
+              <a href="tel:2295080422" className="text-xl font-medium hover:text-coral transition-colors">2295080422</a>
             </div>
             <div className="flex items-center space-x-3">
               <Mail size={20} className="flex-shrink-0" />
               <a href="mailto:agonabeachbar@gmail.com" className="hover:text-coral transition-colors">agonabeachbar@gmail.com</a>
-            </div>
-          </div>
-        </div>
-
-        <div className="space-y-6">
-          <h4 className="text-lg font-medium uppercase tracking-widest text-coral">Booking</h4>
-          <div className="space-y-4 opacity-70 font-light">
-            <p>For reservations and table bookings:</p>
-            <div className="flex items-center space-x-3">
-              <Phone size={20} className="flex-shrink-0" />
-              <a href="tel:2295080422" className="text-xl font-medium hover:text-coral transition-colors">2295080422</a>
             </div>
           </div>
         </div>
