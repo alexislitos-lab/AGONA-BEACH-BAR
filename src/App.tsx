@@ -259,7 +259,7 @@ const MenuSection = () => {
         {
           title: "Spritz & Zero",
           items: [
-            { name: "Aperol Spritz", price: "7.50", description: "Aperol, Prosecco, Soda" },
+            { name: "Aperol Spritz", price: "8.00", description: "Aperol, Prosecco, Soda" },
             { name: "Blue Pulse", price: "8.00", description: "Blueberries, Mint leaves, Isotonic, Red bull" },
             { name: "Island Zero", price: "8.00", description: "Tanqueray 0.0, Lime juice, Almond, Cucumber slices, Pineapple cubes, Ginger beer" },
             { name: "Caribbean Spritz", price: "8.50", description: "Aperol, Prosecco, Melon liqueur, Mango liqueur, Lime juice" },
@@ -274,11 +274,11 @@ const MenuSection = () => {
             { name: "Espresso Martini", price: "9.00", description: "Vodka, Kahlua, Espresso, Sugar syrup" },
             { name: "Mojito", price: "9.00", description: "Rum, Lime wedges, Brown sugar, Mint, Soda" },
             { name: "Negroni", price: "9.00", description: "Gin, Bitters, Red vermouth" },
-            { name: "Margarita", price: "9.00", description: "Tequila, Orange liqueur, Lime" },
+            { name: "Margarita Frozen", price: "9.00", description: "Tequila, Orange liqueur, Lime" },
             { name: "Caipirinia", price: "9.00", description: "Cachaça, Lime wedges, Brown sugar" },
             { name: "Mai Tai", price: "10.00", description: "Rum, Almond, Lime, Orange liqueur" },
             { name: "Bramble", price: "10.00", description: "Gin, Crème de mûre liqueur, Sugar syrup, Lemon juice" },
-            { name: "Daiquiri Strawberry", price: "10.00", description: "Rum, Strawberry liqueur, Strawberry puree, Sugar syrup" },
+            { name: "Daiquiri Strawberry Frozen", price: "10.00", description: "Rum, Strawberry liqueur, Strawberry puree, Sugar syrup" },
             { name: "Paloma", price: "10.00", description: "Tequila, Lime juice, Agave syrup, Pink grapefruit soda" },
             { name: "Pornstar Martini", price: "11.00", description: "Vodka, Passion fruit puree, Passion liqueur, Vanilla, Lime juice" },
             { name: "Long Island", price: "11.00", description: "Vodka, Rum, Gin, Orange liqueur, Lime juice, Sugar syrup, Cola" },
