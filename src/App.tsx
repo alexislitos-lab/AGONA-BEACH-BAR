@@ -129,17 +129,14 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Fresh juices & Smoothies",
+      name: "Fresh Juices & Ice Pops",
       sections: [
         {
           title: "Fresh Juices",
           items: [
             { name: "Homemade Lemonade", price: "4.00" },
             { name: "Fresh Orange Juice", price: "4.00" },
-            { name: "Fresh Mixed Juice", price: "5.50", description: "Seasonal fruits" },
-            { name: "Ginger Berry Boost", price: "6.00", description: "Blueberries, banana, ginger" },
-            { name: "Cherry Oat Blender", price: "6.00", description: "Banana, sour cherry, oat" },
-            { name: "Chia Strawberry Fusion", price: "6.00", description: "Cherries, chia, strawberries" }
+            { name: "Fresh Mixed Juice", price: "5.50", description: "Seasonal fruits" }
           ]
         },
         {
@@ -149,13 +146,6 @@ const MenuSection = () => {
             { name: "Oreo Vanilla & Biscuit", price: "4.50" },
             { name: "Lacta Chocolate", price: "4.50" },
             { name: "Freddoccino", price: "5.00" }
-          ]
-        },
-        {
-          title: "Smoothies",
-          items: [
-            { name: "Red Rum", price: "7.00", description: "Strawberries, cherries, chia, vanilla ice cream" },
-            { name: "Ginger Purple", price: "7.00", description: "Blueberries, ginger, banana, yogurt" }
           ]
         }
       ]
