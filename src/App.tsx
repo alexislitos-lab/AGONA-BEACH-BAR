@@ -250,6 +250,7 @@ const MenuSection = () => {
           title: "Spritz & Zero",
           items: [
             { name: "Aperol Spritz", price: "8.00", description: "Aperol, Prosecco, Soda" },
+            { name: "Sarti Rosa Spritz", price: "10.00", description: "Sarti Rosa, Blood orange, Mango & Passion fruit, Prosecco, Soda" },
             { name: "Blue Pulse", price: "8.00", description: "Blueberries, Mint leaves, Isotonic, Red bull" },
             { name: "Island Zero", price: "8.00", description: "Tanqueray 0.0, Lime juice, Almond, Cucumber slices, Pineapple cubes, Ginger beer" },
             { name: "Caribbean Spritz", price: "8.50", description: "Aperol, Prosecco, Melon liqueur, Mango liqueur, Lime juice" },
