@@ -6,7 +6,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Lenis from 'lenis';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'motion/react';
-import { Menu, X, Facebook, Instagram, MapPin, Phone, Mail, ArrowRight, ChevronRight, Users, Leaf } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, MapPin, Phone, Mail, ArrowRight, ChevronRight, Users, Leaf, Milk } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -543,6 +543,22 @@ const MenuSection = () => {
           ]
         }
       ]
+    },
+    {
+      name: "Smoothies",
+      sections: [
+        {
+          title: "Smoothies",
+          items: [
+            { name: "Wild forest", price: "7.00", description: "Φράουλα, Βατόμουρο, Μούρο, Φραγκοστάφυλο, Κεράσι", isMilk: true },
+            { name: "Pink paradise", price: "7.00", description: "Φράουλα, Ροδάκινο, Μάνγκο", isMilk: true },
+            { name: "Yellow sunrise", price: "7.00", description: "Μάνγκο, Ροδάκινο, Ανανάς", isMilk: true },
+            { name: "Tropical mix", price: "7.00", description: "Ανανάς, Παπάγια, Μάνγκο", isMilk: true },
+            { name: "Red passion", price: "7.00", description: "Φράουλα, Βατόμουρο, Μάνγκο", isMilk: true },
+            { name: "Dream cream", price: "7.00", description: "Καρύδα, Ανανάς, Μπανάνα", isMilk: true }
+          ]
+        }
+      ]
     }
   ];
 
@@ -554,6 +570,7 @@ const MenuSection = () => {
     menuCategories[0],
     menuCategories[1],
     menuCategories[2],
+    menuCategories[13],
     menuCategories[3],
     menuCategories[4],
     menuCategories[5],
@@ -688,6 +705,11 @@ const MenuSection = () => {
                                           <span>Vegetarian</span>
                                         </span>
                                       )}
+                                      {item.isMilk && (
+                                        <span className="inline-flex items-center justify-center text-[9px] font-bold text-sky-800 bg-sky-100/40 border border-sky-200/50 p-1 rounded-full" title="Εμπεριέχει Γάλα / Contains Milk">
+                                          <Milk size={10} className="text-sky-800" />
+                                        </span>
+                                      )}
                                     </h4>
                                     <div className="flex-grow mx-4 border-b border-ocean/5 border-dotted"></div>
                                     <span className="text-sm font-light opacity-60 italic whitespace-nowrap">€{item.price}</span>
@@ -700,6 +722,14 @@ const MenuSection = () => {
                             </div>
                           </div>
                         ))}
+                        {category.name === "Smoothies" && (
+                          <div className="pt-4 border-t border-ocean/5 flex items-center justify-center sm:justify-start gap-2 text-[10px] font-medium text-ocean/60 uppercase tracking-widest">
+                            <span className="inline-flex items-center justify-center text-[9px] font-bold text-sky-800 bg-sky-100/40 border border-sky-200/50 p-1 rounded-full">
+                              <Milk size={11} className="text-sky-800" />
+                            </span>
+                            <span>Εμπεριέχει Γάλα / Contains Milk</span>
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   )}
