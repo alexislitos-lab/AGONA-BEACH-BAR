@@ -550,12 +550,12 @@ const MenuSection = () => {
         {
           title: "Smoothies",
           items: [
-            { name: "Wild forest", price: "7.00", description: "Φράουλα, Βατόμουρο, Μούρο, Φραγκοστάφυλο, Κεράσι", isMilk: true },
-            { name: "Pink paradise", price: "7.00", description: "Φράουλα, Ροδάκινο, Μάνγκο", isMilk: true },
-            { name: "Yellow sunrise", price: "7.00", description: "Μάνγκο, Ροδάκινο, Ανανάς", isMilk: true },
-            { name: "Tropical mix", price: "7.00", description: "Ανανάς, Παπάγια, Μάνγκο", isMilk: true },
-            { name: "Red passion", price: "7.00", description: "Φράουλα, Βατόμουρο, Μάνγκο", isMilk: true },
-            { name: "Dream cream", price: "7.00", description: "Καρύδα, Ανανάς, Μπανάνα", isMilk: true }
+            { name: "Wild forest", price: "5.00", description: "Φράουλα, Βατόμουρο, Μούρο, Φραγκοστάφυλο, Κεράσι", isMilk: true },
+            { name: "Pink paradise", price: "5.00", description: "Φράουλα, Ροδάκινο, Μάνγκο", isMilk: true },
+            { name: "Yellow sunrise", price: "5.00", description: "Μάνγκο, Ροδάκινο, Ανανάς", isMilk: true },
+            { name: "Tropical mix", price: "5.00", description: "Ανανάς, Παπάγια, Μάνγκο", isMilk: true },
+            { name: "Red passion", price: "5.00", description: "Φράουλα, Βατόμουρο, Μάνγκο", isMilk: true },
+            { name: "Dream cream", price: "5.00", description: "Καρύδα, Ανανάς, Μπανάνα", isMilk: true }
           ]
         }
       ]
