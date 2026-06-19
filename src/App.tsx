@@ -129,7 +129,7 @@ const MenuSection = () => {
       ]
     },
     {
-      name: "Fresh Juices & Ice Pops",
+      name: "Fresh juices & Smoothies",
       sections: [
         {
           title: "Fresh Juices",
@@ -146,6 +146,17 @@ const MenuSection = () => {
             { name: "Oreo Vanilla & Biscuit", price: "4.50" },
             { name: "Lacta Chocolate", price: "4.50" },
             { name: "Freddoccino", price: "5.00" }
+          ]
+        },
+        {
+          title: "Smoothies",
+          items: [
+            { name: "Wild forest", price: "6.00", description: "Φράουλα, Βατόμουρο, Μούρο, Φραγκοστάφυλο, Κεράσι", isMilk: true },
+            { name: "Pink paradise", price: "6.00", description: "Φράουλα, Ροδάκινο, Μάνγκο", isMilk: true },
+            { name: "Yellow sunrise", price: "6.00", description: "Μάνγκο, Ροδάκινο, Ανανάς", isMilk: true },
+            { name: "Tropical mix", price: "6.00", description: "Ανανάς, Παπάγια, Μάνγκο", isMilk: true },
+            { name: "Red passion", price: "6.00", description: "Φράουλα, Βατόμουρο, Μάνγκο", isMilk: true },
+            { name: "Dream cream", price: "6.00", description: "Καρύδα, Ανανάς, Μπανάνα", isMilk: true }
           ]
         }
       ]
@@ -431,7 +442,7 @@ const MenuSection = () => {
             { name: "Hot Dog", price: "3.50", description: "Ψωμί αφράτο, λουκάνικο, κέτσαπ, μουστάρδα, μαγιονέζα & καραμελωμένα κρεμμύδια" },
             { name: "Crispy Fries", price: "4.00", description: "Μερίδα πατάτες τηγανιτές" },
             { name: "Cheddar Bacon Fries", price: "5.00", description: "Μερίδα πατάτες τηγανιτές με cheddar & bacon" },
-            { name: "Chicken Nuggets", price: "7.50", description: "Τραγανά φιλέτα από παναρισμένο στήθος κοτόπουλο, πατάτες τηγανητές & chicken σως" }
+            { name: "Chicken Nuggets", price: "8.00", description: "Τραγανά φιλέτα από παναρισμένο στήθος κοτόπουλο, πατάτες τηγανητές & chicken σως" }
           ]
         },
         {
@@ -543,22 +554,6 @@ const MenuSection = () => {
           ]
         }
       ]
-    },
-    {
-      name: "Smoothies",
-      sections: [
-        {
-          title: "Smoothies",
-          items: [
-            { name: "Wild forest", price: "5.00", description: "Φράουλα, Βατόμουρο, Μούρο, Φραγκοστάφυλο, Κεράσι", isMilk: true },
-            { name: "Pink paradise", price: "5.00", description: "Φράουλα, Ροδάκινο, Μάνγκο", isMilk: true },
-            { name: "Yellow sunrise", price: "5.00", description: "Μάνγκο, Ροδάκινο, Ανανάς", isMilk: true },
-            { name: "Tropical mix", price: "5.00", description: "Ανανάς, Παπάγια, Μάνγκο", isMilk: true },
-            { name: "Red passion", price: "5.00", description: "Φράουλα, Βατόμουρο, Μάνγκο", isMilk: true },
-            { name: "Dream cream", price: "5.00", description: "Καρύδα, Ανανάς, Μπανάνα", isMilk: true }
-          ]
-        }
-      ]
     }
   ];
 
@@ -570,7 +565,6 @@ const MenuSection = () => {
     menuCategories[0],
     menuCategories[1],
     menuCategories[2],
-    menuCategories[13],
     menuCategories[3],
     menuCategories[4],
     menuCategories[5],
@@ -722,7 +716,7 @@ const MenuSection = () => {
                             </div>
                           </div>
                         ))}
-                        {category.name === "Smoothies" && (
+                        {category.name === "Fresh juices & Smoothies" && (
                           <div className="pt-4 border-t border-ocean/5 flex items-center justify-center sm:justify-start gap-2 text-[10px] font-medium text-ocean/60 uppercase tracking-widest">
                             <span className="inline-flex items-center justify-center text-[9px] font-bold text-sky-800 bg-sky-100/40 border border-sky-200/50 p-1 rounded-full">
                               <Milk size={11} className="text-sky-800" />
