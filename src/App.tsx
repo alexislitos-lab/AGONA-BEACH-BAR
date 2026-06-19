@@ -151,12 +151,12 @@ const MenuSection = () => {
         {
           title: "Smoothies",
           items: [
-            { name: "Wild forest", price: "6.00", description: "Φράουλα, Βατόμουρο, Μούρο, Φραγκοστάφυλο, Κεράσι", isMilk: true },
-            { name: "Pink paradise", price: "6.00", description: "Φράουλα, Ροδάκινο, Μάνγκο", isMilk: true },
-            { name: "Yellow sunrise", price: "6.00", description: "Μάνγκο, Ροδάκινο, Ανανάς", isMilk: true },
-            { name: "Tropical mix", price: "6.00", description: "Ανανάς, Παπάγια, Μάνγκο", isMilk: true },
-            { name: "Red passion", price: "6.00", description: "Φράουλα, Βατόμουρο, Μάνγκο", isMilk: true },
-            { name: "Dream cream", price: "6.00", description: "Καρύδα, Ανανάς, Μπανάνα", isMilk: true }
+            { name: "Wild forest", price: "6.00", description: "Strawberry, Raspberry, Blueberry, Currant, Cherry", isMilk: true },
+            { name: "Pink paradise", price: "6.00", description: "Strawberry, Peach, Mango", isMilk: true },
+            { name: "Yellow sunrise", price: "6.00", description: "Mango, Peach, Pineapple", isMilk: true },
+            { name: "Tropical mix", price: "6.00", description: "Pineapple, Papaya, Mango", isMilk: true },
+            { name: "Red passion", price: "6.00", description: "Strawberry, Raspberry, Mango", isMilk: true },
+            { name: "Dream cream", price: "6.00", description: "Coconut, Pineapple, Banana", isMilk: true }
           ]
         }
       ]
@@ -439,7 +439,7 @@ const MenuSection = () => {
           title: "Snacks & More",
           items: [
             { name: "Toast", price: "3.50", description: "Ψωμί του τοστ, gouda & γαλόπουλα" },
-            { name: "Hot Dog", price: "3.50", description: "Ψωμί αφράτο, λουκάνικο, κέτσαπ, μουστάρδα, μαγιονέζα & καραμελωμένα κρεμμύδια" },
+            { name: "Hot Dog", price: "5.00", description: "Ψωμί αφράτο, λουκάνικο, κέτσαπ, μουστάρδα, μαγιονέζα & καραμελωμένα κρεμμύδια" },
             { name: "Crispy Fries", price: "4.00", description: "Μερίδα πατάτες τηγανιτές" },
             { name: "Cheddar Bacon Fries", price: "5.00", description: "Μερίδα πατάτες τηγανιτές με cheddar & bacon" },
             { name: "Chicken Nuggets", price: "8.00", description: "Τραγανά φιλέτα από παναρισμένο στήθος κοτόπουλο, πατάτες τηγανητές & chicken σως" }
