@@ -151,12 +151,12 @@ const MenuSection = () => {
         {
           title: "Smoothies",
           items: [
-            { name: "Wild forest", price: "6.00", description: "Strawberry, Raspberry, Blueberry, Currant, Cherry", isMilk: true },
-            { name: "Pink paradise", price: "6.00", description: "Strawberry, Peach, Mango", isMilk: true },
-            { name: "Yellow sunrise", price: "6.00", description: "Mango, Peach, Pineapple", isMilk: true },
-            { name: "Tropical mix", price: "6.00", description: "Pineapple, Papaya, Mango", isMilk: true },
-            { name: "Red passion", price: "6.00", description: "Strawberry, Raspberry, Mango", isMilk: true },
-            { name: "Dream cream", price: "6.00", description: "Coconut, Pineapple, Banana", isMilk: true }
+            { name: "Wild forest", price: "6.00", description: "Strawberry, Raspberry, Blueberry, Currant, Cherry" },
+            { name: "Pink paradise", price: "6.00", description: "Strawberry, Peach, Mango" },
+            { name: "Yellow sunrise", price: "6.00", description: "Mango, Peach, Pineapple" },
+            { name: "Tropical mix", price: "6.00", description: "Pineapple, Papaya, Mango" },
+            { name: "Red passion", price: "6.00", description: "Strawberry, Raspberry, Mango" },
+            { name: "Dream cream", price: "6.00", description: "Coconut, Pineapple, Banana" }
           ]
         }
       ]
@@ -168,7 +168,7 @@ const MenuSection = () => {
           title: "Refreshments",
           items: [
             { name: "Iced Tea (Glass)", price: "3.00", description: "Lemon / Peach" },
-            { name: "Coca Cola (250ml)", price: "3.50", description: "Zero / Light" },
+            { name: "Coca Cola (250ml)", price: "3.50", description: "Zero / Light / No Caffeine" },
             { name: "Fanta (250ml)", price: "3.50", description: "Orange / Blue / Lemon" },
             { name: "Sprite (250ml)", price: "3.50" },
             { name: "Schweppes (330ml)", price: "3.50", description: "Pink Grapefruit / Tropical Fusion / Pomegrenade / Lemonade Bergamont / Orange Blossom" },
@@ -249,7 +249,8 @@ const MenuSection = () => {
             { name: "Fisher Bucket (4x330ml)", price: "18.00" },
             { name: "Sol Bucket (4x330ml)", price: "20.00" },
             { name: "Bud Bucket (4x330ml)", price: "20.00" },
-            { name: "Erdinger Bucket (4x330ml)", price: "22.00" }
+            { name: "Erdinger Bucket (4x330ml)", price: "22.00" },
+            { name: "Ultra Bucket Sol (24x330)", price: "110.00" }
           ]
         }
       ]
@@ -278,6 +279,8 @@ const MenuSection = () => {
             { name: "Negroni", price: "9.00", description: "Gin, Bitters, Red vermouth" },
             { name: "Margarita Frozen", price: "9.00", description: "Tequila, Orange liqueur, Lime" },
             { name: "Caipirinia", price: "9.00", description: "Cachaça, Lime wedges, Brown sugar" },
+            { name: "Pina colada", price: "9.00", description: "Coconut rum, white rum, pineapple purée, coconut purée" },
+            { name: "Caiproska Classics", price: "10.00", description: "Vodka, lime, brown sugar, strawberry ice pops, mint" },
             { name: "Mai Tai", price: "10.00", description: "Rum, Almond, Lime, Orange liqueur" },
             { name: "Bramble", price: "10.00", description: "Gin, Crème de mûre liqueur, Sugar syrup, Lemon juice" },
             { name: "Daiquiri Strawberry Frozen", price: "10.00", description: "Rum, Strawberry liqueur, Strawberry puree, Sugar syrup" },
@@ -486,7 +489,7 @@ const MenuSection = () => {
           items: [
             { name: "Greek Dakos", price: "7.50", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, αγγούρι, πιπεριά, κάπαρη, ρίγανη & αρωματισμένο ελαιόλαδο", isVegetarian: true },
             { name: "Caesar's", price: "8.50", description: "Κοτόπουλο ψητό με παρμεζάνα, μπέικον, καλαμπόκι, μαρούλι, iceberg, κρουτόν & σως caesar" },
-            { name: "Quinoa", price: "9.00", description: "Ανάμεικτη σαλάτα με κινόα, spread αβοκάντο, φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών", isVegan: true, isVegetarian: true }
+            { name: "Pear & Orange", price: "9.00", description: "Ανάμεικτη σαλάτα με κινόα, spread αβοκάντο, φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών", isVegan: true, isVegetarian: true }
           ]
         },
         {
@@ -541,7 +544,7 @@ const MenuSection = () => {
         {
           title: "Fruit Salads",
           items: [
-            { name: "Fruit Salad Bowl", price: "6.00", description: "Μπανάνα, καρπούζι, πεπόνι, κεράσι" },
+            { name: "Fruit Salad Bowl", price: "6.00", description: "Watermelon, melon, apple, banana, pineapple, cherry, kiwi" },
             { name: "Oat & Yogurt Energy Bowl", price: "8.00", description: "Μπανάνα, μήλο, ανανά, μέλι, ταχίνι, mousse γιαουρτιού αρωματισμένη με λεμόνι & βρώσιμα άνθη" },
             { name: "Fruit Salad Plate", price: "18.00", description: "Καρπούζι, πεπόνι, σταφύλι, ανανάς, κεράσια, ακτινίδιο, passion fruit", isForTwo: true }
           ]
@@ -716,14 +719,7 @@ const MenuSection = () => {
                             </div>
                           </div>
                         ))}
-                        {category.name === "Fresh juices & Smoothies" && (
-                          <div className="pt-4 border-t border-ocean/5 flex items-center justify-center sm:justify-start gap-2 text-[10px] font-medium text-ocean/60 uppercase tracking-widest">
-                            <span className="inline-flex items-center justify-center text-[9px] font-bold text-sky-800 bg-sky-100/40 border border-sky-200/50 p-1 rounded-full">
-                              <Milk size={11} className="text-sky-800" />
-                            </span>
-                            <span>Εμπεριέχει Γάλα / Contains Milk</span>
-                          </div>
-                        )}
+                        {/* Removed milk legend as per request */}
                       </div>
                     </motion.div>
                   )}
