@@ -262,7 +262,7 @@ const MenuSection = () => {
           title: "Spritz & Zero",
           items: [
             { name: "Aperol Spritz", price: "8.00", description: "Aperol, Prosecco, Soda" },
-            { name: "Sarti Rosa Spritz", price: "10.00", description: "Sarti Rosa, Blood orange, Mango & Passion fruit, Prosecco, Soda" },
+            { name: "Sarti Rosa Spritz", price: "8.00", description: "Sarti Rosa, Blood orange, Mango & Passion fruit, Prosecco, Soda" },
             { name: "Blue Pulse", price: "8.00", description: "Blueberries, Mint leaves, Isotonic, Red bull" },
             { name: "Island Zero", price: "8.00", description: "Tanqueray 0.0, Lime juice, Almond, Cucumber slices, Pineapple cubes, Ginger beer" },
             { name: "Caribbean Spritz", price: "8.50", description: "Aperol, Prosecco, Melon liqueur, Mango liqueur, Lime juice" },
@@ -277,10 +277,10 @@ const MenuSection = () => {
             { name: "Espresso Martini", price: "9.00", description: "Vodka, Kahlua, Espresso, Sugar syrup" },
             { name: "Mojito", price: "9.00", description: "Rum, Lime wedges, Brown sugar, Mint, Soda" },
             { name: "Negroni", price: "9.00", description: "Gin, Bitters, Red vermouth" },
-            { name: "Margarita Frozen", price: "9.00", description: "Tequila, Orange liqueur, Lime" },
+            { name: "Margarita / Margarita Frozen", price: "9.00", description: "Tequila, Orange liqueur, Lime" },
             { name: "Caipirinia", price: "9.00", description: "Cachaça, Lime wedges, Brown sugar" },
             { name: "Pina colada", price: "9.00", description: "Coconut rum, white rum, pineapple purée, coconut purée" },
-            { name: "Caiproska Classics", price: "10.00", description: "Vodka, lime, brown sugar, strawberry ice pops, mint" },
+            { name: "Caiproska", price: "10.00", description: "Vodka, lime, brown sugar, strawberry ice pops, mint" },
             { name: "Mai Tai", price: "10.00", description: "Rum, Almond, Lime, Orange liqueur" },
             { name: "Bramble", price: "10.00", description: "Gin, Crème de mûre liqueur, Sugar syrup, Lemon juice" },
             { name: "Daiquiri Strawberry Frozen", price: "10.00", description: "Rum, Strawberry liqueur, Strawberry puree, Sugar syrup" },
@@ -487,7 +487,7 @@ const MenuSection = () => {
         {
           title: "Salads",
           items: [
-            { name: "Greek Dakos", price: "7.50", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, αγγούρι, πιπεριά, κάπαρη, ρίγανη & αρωματισμένο ελαιόλαδο", isVegetarian: true },
+            { name: "Greek Dakos", price: "7.50", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, αγγούρι, πιπεριά, κρεμμύδι, κάπαρη, ρίγανη & αρωματισμένο ελαιόλαδο", isVegetarian: true },
             { name: "Caesar's", price: "8.50", description: "Κοτόπουλο ψητό με παρμεζάνα, μπέικον, καλαμπόκι, μαρούλι, iceberg, κρουτόν & σως caesar" },
             { name: "Pear & Orange", price: "9.00", description: "Ανάμεικτη σαλάτα με κινόα, spread αβοκάντο, φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών", isVegan: true, isVegetarian: true }
           ]
