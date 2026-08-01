@@ -450,24 +450,24 @@ const MenuSection = () => {
             { name: "Hot Dog", price: "5.00", description: "Ψωμί αφράτο, λουκάνικο, κέτσαπ, μουστάρδα, μαγιονέζα & καραμελωμένα κρεμμύδια" },
             { name: "Crispy Fries", price: "4.00", description: "Μερίδα πατάτες τηγανιτές" },
             { name: "Cheddar Bacon Fries", price: "5.00", description: "Μερίδα πατάτες τηγανιτές με cheddar & bacon" },
-            { name: "Chicken Nuggets", price: "8.00", description: "Τραγανά φιλέτα από παναρισμένο στήθος κοτόπουλο, πατάτες τηγανητές & chicken σως" }
+            { name: "Chicken Nuggets", price: "9.00", description: "Τραγανά φιλέτα από παναρισμένο στήθος κοτόπουλο, πατάτες τηγανητές & chicken σως" }
           ]
         },
         {
           title: "Tortilla Wraps",
           items: [
-            { name: "Classic Wrap", price: "4.50", description: "Πίτα tortilla με γαλόπουλα, gouda, μαρούλι, τομάτα & μαγιονέζα" },
-            { name: "Garden Vegie Wrap", price: "5.00", description: "Πίτα tortilla με μανιτάρια, πιπεριές tricolor, κρεμμύδι σοτέ, σκόρδο & μαϊντανό", isVegan: true, isVegetarian: true },
-            { name: "Chicken Cheddar Wrap", price: "5.50", description: "Πίτα tortilla με κοτόπουλο ψητό, πιπεριές σοτέ & cheddar σως" },
+            { name: "Classic Wrap", price: "5.00", description: "Πίτα tortilla με γαλόπουλα, gouda, μαρούλι, τομάτα & μαγιονέζα" },
+            { name: "Garden Vegie Wrap", price: "5.50", description: "Πίτα tortilla με μανιτάρια, πιπεριές tricolor, κρεμμύδι σοτέ, σκόρδο & μαϊντανό", isVegan: true, isVegetarian: true },
+            { name: "Chicken Cheddar Wrap", price: "6.00", description: "Πίτα tortilla με κοτόπουλο ψητό, πιπεριές σοτέ & cheddar σως" },
             { name: "Tacos (3pcs)", price: "7.50", description: "Chili Beef Tacos / Chicken Tacos / Veggie Tacos" }
           ]
         },
         {
           title: "Sandwiches",
           items: [
-            { name: "Classic Sandwich", price: "4.50", description: "Μπαγκέτα λεύκη με γαλόπουλα, gouda, μαρούλι, τομάτα & μαγιονέζα" },
-            { name: "Chicken Sandwich", price: "5.50", description: "Μπαγκέτα λεύκη με κοτόπουλο ψητό, gouda, μαρούλι, τομάτα & chicken σως" },
-            { name: "Nugget Sandwich", price: "6.00", description: "Ψωμί brioche με φιλέτα από παναρισμένο στήθος κοτόπουλο, flakes παρμεζάνας, iceberg, τομάτα & chicken σως" }
+            { name: "Classic Sandwich", price: "5.00", description: "Μπαγκέτα λεύκη με γαλόπουλα, gouda, μαρούλι, τομάτα & μαγιονέζα" },
+            { name: "Chicken Sandwich", price: "6.00", description: "Μπαγκέτα λεύκη με κοτόπουλο ψητό, gouda, μαρούλι, τομάτα & chicken σως" },
+            { name: "Nugget Sandwich", price: "7.00", description: "Ψωμί brioche με φιλέτα από παναρισμένο στήθος κοτόπουλο, flakes παρμεζάνας, iceberg, τομάτα & chicken σως" }
           ]
         },
         {
@@ -480,8 +480,8 @@ const MenuSection = () => {
         {
           title: "Club Sandwiches",
           items: [
-            { name: "Club Sandwich", price: "8.50", description: "Ψωμί του τοστ με γαλοπούλα, τυρί gouda, μπέικον, iceberg, τομάτα, μαγιονέζα & πατάτες τηγανιτές" },
-            { name: "Chicken Club Sandwich", price: "9.50", description: "Ψωμί του τοστ με φιλετίνια από κοτόπουλο, μπέικον, τυρί gouda, τομάτα, iceberg, μαγιονέζα και πατάτες τηγανιτές" }
+            { name: "Club Sandwich", price: "9.50", description: "Ψωμί του τοστ με γαλοπούλα, τυρί gouda, μπέικον, iceberg, τομάτα, μαγιονέζα & πατάτες τηγανιτές" },
+            { name: "Chicken Club Sandwich", price: "10.50", description: "Ψωμί του τοστ με φιλετίνια από κοτόπουλο, μπέικον, τυρί gouda, τομάτα, iceberg, μαγιονέζα και πατάτες τηγανιτές" }
           ]
         }
       ]
@@ -492,9 +492,9 @@ const MenuSection = () => {
         {
           title: "Salads",
           items: [
-            { name: "Greek Dakos", price: "7.50", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, αγγούρι, πιπεριά, κρεμμύδι, κάπαρη, ρίγανη & αρωματισμένο ελαιόλαδο", isVegetarian: true },
-            { name: "Caesar's", price: "8.50", description: "Κοτόπουλο ψητό με παρμεζάνα, μπέικον, καλαμπόκι, μαρούλι, iceberg, κρουτόν & σως caesar" },
-            { name: "Pear & Orange", price: "9.00", description: "Ανάμεικτη σαλάτα με κινόα, spread αβοκάντο, φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών", isVegan: true, isVegetarian: true }
+            { name: "Greek Dakos", price: "8.00", description: "Παξιμάδι χαρουπιού με φέτα, ελιά, τομάτα, αγγούρι, πιπεριά, κρεμμύδι, κάπαρη, ρίγανη & αρωματισμένο ελαιόλαδο", isVegetarian: true },
+            { name: "Caesar's", price: "9.00", description: "Κοτόπουλο ψητό με παρμεζάνα, μπέικον, καλαμπόκι, μαρούλι, iceberg, κρουτόν & σως caesar" },
+            { name: "Pear & Orange", price: "9.50", description: "Ανάμεικτη σαλάτα με κινόα, spread αβοκάντο, φιλέτα πορτοκαλιού, πίκλες από αχλάδι, flakes αμυγδάλου & vinegret εσπεριδοειδών", isVegan: true, isVegetarian: true }
           ]
         },
         {
@@ -538,7 +538,7 @@ const MenuSection = () => {
             { name: "Greek Gyros Bowl (Pork)", price: "8.50", description: "Γύρος χοιρινός με τομάτα καρέ και μυρωδικά, φρέσκο κρεμμύδι, σχινόπρασο, σως γιαουρτιού & πατάτες τηγανιτές" },
             { name: "Greek Gyros Bowl (Chicken)", price: "9.50", description: "Γύρος κοτόπουλο με τομάτα καρέ και μυρωδικά, φρέσκο κρεμμύδι, iceberg, σχινόπρασο, chicken σως & πατάτες τηγανιτές" },
             { name: "Beef Patties", price: "13.00", description: "Δύο μοσχαρίσια μπιφτέκια των 200gr, σερβιριζόμενα με ανάμεικτη σαλάτα ή πατάτες τηγανητές" },
-            { name: "Mix Grill", price: "18.00", description: "Φιλετίνια κοτόπουλο, λουκάνικα, μπιφτέκια μοσχαρίσια, γύρος χοιρινός, γύρος κοτόπουλο, πιτούλες & πατάτες τηγανητές", isForTwo: true }
+            { name: "Mix Grill", price: "20.00", description: "Φιλετίνια κοτόπουλο, λουκάνικα, μπιφτέκια μοσχαρίσια, γύρος χοιρινός, γύρος κοτόπουλο, πιτούλες & πατάτες τηγανητές", isForTwo: true }
           ]
         }
       ]
@@ -551,7 +551,7 @@ const MenuSection = () => {
           items: [
             { name: "Fruit Salad Bowl", price: "6.00", description: "Watermelon, melon, apple, banana, pineapple, cherry, kiwi" },
             { name: "Oat & Yogurt Energy Bowl", price: "8.00", description: "Μπανάνα, μήλο, ανανά, μέλι, ταχίνι, mousse γιαουρτιού αρωματισμένη με λεμόνι & βρώσιμα άνθη" },
-            { name: "Fruit Salad Plate", price: "18.00", description: "Καρπούζι, πεπόνι, σταφύλι, ανανάς, κεράσια, ακτινίδιο, passion fruit", isForTwo: true }
+            { name: "Fruit Salad Plate", price: "20.00", description: "Καρπούζι, πεπόνι, σταφύλι, ανανάς, κεράσια, ακτινίδιο, passion fruit", isForTwo: true }
           ]
         },
         {
