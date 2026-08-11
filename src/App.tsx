@@ -174,11 +174,8 @@ const MenuSection = () => {
             { name: "Vikos Sodas (250ml)", price: "3.50", description: "Pink Grapefruit / Indian Tonic / Indian Tonic 0% / Grapefruit Tonic Water 0%" },
             { name: "Schweppes (330ml)", price: "3.50", description: "Pink Grapefruit / Tropical Fusion / Pomegrenade / Lemonade Bergamont / Orange Blossom" },
             { name: "Coca Cola (250ml)", price: "3.50", description: "Zero / Light / No Caffeine" },
-            { name: "Fanta (250ml)", price: "3.50", description: "Orange / Blue / Lemon" },
-            { name: "Sprite (250ml)", price: "3.50" },
             { name: "Sparkling Water Mitsikeli (250ml)", price: "3.50" },
             { name: "Sparkling Water Mitsikeli (750ml)", price: "9.50" },
-            { name: "Perrier (330ml)", price: "4.00" },
             { name: "Arizona (450ml)", price: "5.00", description: "Green Tea & Honey / Pomegrenade / Blueberry / Green Tea Zero Sugar" },
             { name: "Three Cents (200ml)", price: "5.00", description: "Cherry Soda / Pink Grapefruit / Aegean Tonic / Mandarin & Bergamont" }
           ]
